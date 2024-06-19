@@ -10,8 +10,8 @@
 <body>
     <form class="formulario" method="post">
         <h1>Atendimentos</h1>
-        <fieldset>
-            <legend>Identificação</legend>
+        <fieldset class="formulario__identificacao">
+            <legend class="centralizado">Identificação</legend>
             <div class="entradaFormulario">
                 <label for="identificacaoAtendente">Nome do Atendente</label>
                 <input type="text" id="identificacaoAtendente" name="identificacaoAtendente" required minlength="5" maxlength="100">

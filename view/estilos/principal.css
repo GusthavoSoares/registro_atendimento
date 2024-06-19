@@ -9,10 +9,6 @@
     --fonte_titulo: "Roboto";
     --tamanho_fonte_texto: 1.4rem;
     --tamanho_fonte_titulo: 2rem;
-    --media-pocket: 360px;
-    --midia-celular: 680px;
-    --media-tablet: 960px;
-    --media-desktop: 1280px;
 
 }
 
@@ -34,9 +30,51 @@ body {
     position: relative;
 }
 
+.centralizado {
+    text-align: center;
+}
+
 .formulario {
     position: absolute;
     bottom: 0;
     top: 25%;
-    left: 25%;
+    left: 38%;
+    margin-right: 2%;
+}
+
+.formulario>h1 {
+    font-weight: normal;
+    font-size: var(--tamanho_fonte_titulo);
+    text-align: center;
+}
+
+.formulario__identificacao {
+    border: 0;
+    padding: 2%;
+
+}
+
+.formulario__identificacao>legend {
+    background-color: var(--cor_tercearia);
+    width: 100%;
+
+}
+
+
+@media screen and (max-width:980px) {
+    .formulario {
+        left: 30%;
+    }
+}
+
+@media screen and (max-width:680px) {
+    .formulario {
+        left: 20%;
+    }
+}
+
+@media screen and (max-width:340px) {
+    .formulario {
+        left: 5%;
+    }
 }
