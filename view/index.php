@@ -3,20 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./estilos/principal.css">
-    <link rel="stylesheet" href="./estilos/pagina-principal.css">
+    <link rel="stylesheet" href="./estilos/geral.css">
+    <link rel="stylesheet" href="./estilos/paginaPrincipal.css">
     <title>Cadastro de clientes</title>
 </head>
 <body>
     <form class="formulario" method="post">
         <h1>Atendimentos</h1>
         <fieldset class="formulario__identificacao">
-            <legend class="centralizado">Identificação</legend>
-            <div class="entradaFormulario">
+            <legend class="centralizado formulario__subtitulo">Identificação</legend>
+            <div class="atendimento">
                 <label for="identificacaoAtendente">Nome do Atendente</label>
                 <input type="text" id="identificacaoAtendente" name="identificacaoAtendente" required minlength="5" maxlength="100">
-            </div>
-            <div class="entradaFormulario">
                 <label for="identificacaoAtendente">Tipo de atendimento</label>
                 <select name="tipoAtendimento" required>
                     <option value="0">Escolha o tipo de atendimento...</option>
@@ -29,8 +27,10 @@
                     <option value="7">Outra</option>
                 </select>
             </div>
-            <div class="entradaFormulario">
-                <label for="pessoaAtendida">Quem estou atendendo </label>
+            <div class="centralizado formulario__subtitulo">
+                <label for="pessoaAtendida" >Quem estou atendendo </label>
+            </div>
+                <div class="opcoesAtendimentos">
                 <div class="opcaoFormulario">
                     <input type="radio" name="pessoasAtendimento" id="empregador" required>
                     <label for="empregador">Empregador</label>
@@ -56,7 +56,7 @@
                     <label for="outro">Outro</label>
                 </div>
             </div>
-            <input type="submit" value="Próximo">
+            <input type="submit" value="Próximo" class="formulario__botao">
         </fieldset>
 
     </form>

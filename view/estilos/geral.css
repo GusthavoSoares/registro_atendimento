@@ -9,7 +9,6 @@
     --fonte_titulo: "Roboto";
     --tamanho_fonte_texto: 1.4rem;
     --tamanho_fonte_titulo: 2rem;
-
 }
 
 
@@ -25,6 +24,7 @@ html {
     height: 100%;
 }
 
+
 body {
     background-color: var(--cor_principal);
     position: relative;
@@ -34,47 +34,26 @@ body {
     text-align: center;
 }
 
-.formulario {
-    position: absolute;
-    bottom: 0;
-    top: 25%;
-    left: 38%;
-    margin-right: 2%;
-}
-
-.formulario>h1 {
-    font-weight: normal;
-    font-size: var(--tamanho_fonte_titulo);
-    text-align: center;
-}
-
-.formulario__identificacao {
-    border: 0;
-    padding: 2%;
-
-}
-
-.formulario__identificacao>legend {
+.formulario__subtitulo {
     background-color: var(--cor_tercearia);
     width: 100%;
+    margin: 1.5% 0;
+    border-radius: 20px;
 
 }
 
-
-@media screen and (max-width:980px) {
-    .formulario {
-        left: 30%;
-    }
+.formulario__botao {
+    margin: 2% 0;
+    padding: 1% 5%;
+    background-color: var(--cor_destaque);
+    border: 0;
+    border-radius: 20px;
+    color: var(--cor_tercearia);
+    cursor: pointer;
 }
 
-@media screen and (max-width:680px) {
-    .formulario {
-        left: 20%;
-    }
-}
-
-@media screen and (max-width:340px) {
-    .formulario {
-        left: 5%;
-    }
+.formulario__botao:hover {
+    transition: 1s;
+    background-color: var(--cor_tercearia);
+    color: var(--cor_destaque);
 }
