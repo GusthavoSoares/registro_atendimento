@@ -13,10 +13,10 @@
         <fieldset class="formulario__identificacao">
             <legend class="centralizado formulario__subtitulo">Identificação</legend>
             <div class="atendimento">
-                <label for="identificacaoAtendente">Nome do Atendente</label>
-                <input type="text" id="identificacaoAtendente" name="identificacaoAtendente" required minlength="5" maxlength="100">
-                <label for="identificacaoAtendente">Tipo de atendimento</label>
-                <select name="tipoAtendimento" required>
+                <label class="formulario__legenda" for="identificacaoAtendente">Nome do Atendente</label>
+                <input type="text" id="identificacaoAtendente" name="identificacaoAtendente" class="formulario__entrada" required minlength="5" maxlength="100">
+                <label class="formulario__legenda" for="identificacaoAtendente">Tipo de atendimento</label>
+                <select class="formulario__selecao" name="tipoAtendimento" required>
                     <option value="0">Escolha o tipo de atendimento...</option>
                     <option value="1">Presencial</option>
                     <option value="2">Whatsapp</option>
@@ -33,30 +33,32 @@
                 <div class="opcoesAtendimentos">
                 <div class="opcaoFormulario">
                     <input type="radio" name="pessoasAtendimento" id="empregador" required>
-                    <label for="empregador">Empregador</label>
+                    <label for="empregador" class="formulario__legenda">Empregador</label>
                 </div>
                 <div class="opcaoFormulario">
                     <input type="radio" name="pessoasAtendimento" id="trabalhador" required>
-                    <label for="trabalhador">Trabalhador</label>
+                    <label for="trabalhador" class="formulario__legenda">Trabalhador</label>
                 </div>
                 <div class="opcaoFormulario">
                     <input type="radio" name="pessoasAtendimento" id="ads" required> 
-                    <label for="ads">ADS</label> 
+                    <label for="ads" class="formulario__legenda">ADS</label> 
                 </div>
                 <div class="opcaoFormulario">
                     <input type="radio" name="pessoasAtendimento" id="setores" required>
-                    <label for="setores">Setores da FGTAS</label>
+                    <label for="setores" class="formulario__legenda">Setores da FGTAS</label>
                 </div>
                 <div class="opcaoFormulario">
                     <input type="radio" name="pessoasAtendimento" id="mercadoTrabalho" required>
-                    <label for="mercadoTrabalho">Interessado em informações sobre o Mercado de trabalho</label>
+                    <label for="mercadoTrabalho" class="formulario__legenda">Interessado em informações sobre o Mercado de trabalho</label>
                 </div>
                 <div class="opcaoFormulario">
-                    <input type="radio" name="pessoasAtendimento" id="outro" required>
-                    <label for="outro">Outro</label>
+                    <input type="radio" name="pessoasAtendimento" class="formulario__legenda" id="outro" required>
+                    <label for="outro" class="formulario__legenda">Outro</label>
                 </div>
             </div>
-            <input type="submit" value="Próximo" class="formulario__botao">
+            <div class="centralizado">
+                <input type="submit" value="Próximo" class="formulario__botao">
+            </div>
         </fieldset>
 
     </form>
