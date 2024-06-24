@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./estilos/geral.css">
-    <link rel="stylesheet" href="./estilos/paginaPrincipal.css">
-    <title>Cadastro de clientes</title>
+    <link rel="stylesheet" href="./estilos/principal.css">
+    <title>Cadastro de Atendimentos</title>
 </head>
 <body>
     <form class="formulario" method="post">
@@ -62,6 +62,7 @@
         </fieldset>
 
     </form>
+    
     <script src="https://kit.fontawesome.com/df85906e6a.js" crossorigin="anonymous"></script>
 </body>
 </html>

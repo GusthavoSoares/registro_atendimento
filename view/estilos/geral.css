@@ -30,9 +30,63 @@ body {
     position: relative;
 }
 
+.w100 {
+    width: 100%;
+}
+
+.w50 {
+    width: 50%;
+}
+
+.w33 {
+    width: 33.33%;
+}
+
+.w25 {
+    width: 25%;
+}
+
+.h100 {
+    height: 100%;
+}
+
+.h50 {
+    height: 50%;
+}
+
+.h33 {
+    height: 33.33%;
+}
+
+.h25 {
+    height: 25%;
+}
+
 .centralizado {
     text-align: center;
 }
+
+.mb2 {
+    margin-bottom: 2%;
+}
+
+.mb1 {
+    margin-bottom: 1%;
+}
+
+.mt1 {
+    margin-top: 14%;
+}
+
+.mlr1 {
+    margin: 0 1%;
+}
+
+.mbt1 {
+    margin: 1% 0;
+}
+
+
 
 .formulario__legenda {
     color: var(--cor_destaque);
@@ -95,6 +149,34 @@ body {
     outline: 0;
     border-radius: 20px;
 }
+
+.icone {
+    color: var(--cor_principal);
+    font-size: calc(var(--tamanho_fonte_texto) * 0.7);
+    cursor: pointer;
+
+}
+
+
+.icone:hover {
+    transition: 1s;
+    color: var(--cor_tercearia);
+}
+
+.relativo {
+    position: relative;
+}
+
+.absoluto {
+    position: absolute;
+}
+
+.grid90_10 {
+    display: grid;
+    grid-template-columns: 95% 5%;
+    justify-content: center;
+}
+
 
 @media screen and (max-width:980px) {
     .formulario__entrada {
