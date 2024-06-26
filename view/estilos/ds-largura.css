@@ -1,0 +1,27 @@
+.w100 {
+    width: 100%;
+}
+
+.w50 {
+    width: 50%;
+}
+
+.w33 {
+    width: 33.33%;
+}
+
+.w25 {
+    width: 25%;
+}
+
+.mw100 {
+    max-width: 100%;
+}
+
+.mw50 {
+    max-width: 50%;
+}
+
+.mw25 {
+    max-width: 25%;
+}

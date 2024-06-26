@@ -1,27 +1,21 @@
-.formulario {
-    position: absolute;
-    bottom: 0;
-    top: 25%;
-    left: 30%;
+form.formulario {
+    transform: translate(70%, 70%);
     margin-right: 2%;
-    background-color: var(--cor_secundaria);
-    max-height: 35%;
     border-radius: 20px;
-
-
 }
 
-.formulario>h1 {
+form.formulario>h1 {
     font-weight: normal;
     font-size: var(--tamanho_fonte_titulo);
     text-align: center;
     color: var(--cor_destaque);
 }
 
-.formulario__identificacao {
+fieldset.formulario__identificacao {
     border: 0;
     padding: 2%;
-
+    background-color: var(--cor_secundaria);
+    border-radius: 20px;
 }
 
 .atendimento {
@@ -44,9 +38,9 @@
 
 
 @media screen and (max-width:980px) {
-    .formulario {
+    form.formulario {
         left: 10%;
-        max-height: 42%;
+        transform: translate(-1.5%, 40%);
     }
 
     .atendimento {

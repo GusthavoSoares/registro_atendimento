@@ -1,0 +1,47 @@
+.p5 {
+    padding: 5%;
+}
+
+.p2 {
+    padding: 2%;
+}
+
+.ph2 {
+    padding: 0 2%;
+}
+
+.pv2 {
+    padding: 2% 0;
+}
+
+.mb2 {
+    margin-bottom: 2%;
+}
+
+.mb1 {
+    margin-bottom: 1%;
+}
+
+.mt2 {
+    margin-top: 2%;
+}
+
+.mt1 {
+    margin-top: 1%;
+}
+
+.mh2 {
+    margin: 0 2%;
+}
+
+.mh1 {
+    margin: 0 1%;
+}
+
+.mv2 {
+    margin: 2% 0;
+}
+
+.mv1 {
+    margin: 1% 0;
+}

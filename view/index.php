@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./estilos/geral.css">
-    <link rel="stylesheet" href="./estilos/principal.css">
+    <link rel="stylesheet" href="./estilos/ds.css">
+    <link rel="stylesheet" href="./estilos/pg-principal.css">
     <title>Cadastro de Atendimentos</title>
 </head>
-<body>
-    <form class="formulario" method="post">
+<body class="relativo h100">
+    <form class="formulario absoluto" method="post">
         <h1>Atendimentos</h1>
         <fieldset class="formulario__identificacao">
             <legend class="centralizado formulario__subtitulo">Identificação</legend>

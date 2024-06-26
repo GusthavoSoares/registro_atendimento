@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./estilos/geral.css">
-    <link rel="stylesheet" href="./estilos/principal.css">
-    <link rel="stylesheet" href="./estilos/login.css">
+    <link rel="stylesheet" href="./estilos/ds.css">
+    <link rel="stylesheet" href="./estilos/pg-login.css">
     <title>Login</title>
 </head>
 <body>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilos/ds.css">
+    <link rel="stylesheet" href="./estilos/pg-principal.css">
+
+    <title>Empregador</title>
+</head>
+
+<body>
+    <form class="formulario w50 h25" method="post" action="processa_login.php">
+        <h1>Empregador</h1>
+
+        <div class="formulario__login">
+            <label class="formulario__legenda centralizado mbt1" for="nome_empregador">Nome do Empregador</label>
+            <input type="text" id="nome_empregador" name="nome_empregador" class="formulario__entrada mlr1" required maxlength="100">
+        </div>
+
+        <div class="formulario__login">
+            <label class="formulario__legenda centralizado mbt1" for="cnpj_empregador">CNPJ do Empregador</label>
+            <input type="text" id="cnpj_empregador" name="cnpj_empregador" class="formulario__entrada mlr1" required pattern="[0-9]{14}" maxlength="14">
+        </div>
+
+        <div class="formulario__login">
+            <label class="formulario__legenda centralizado mbt1" for="telefone_empregador">Telefone de Contato:</label>
+            <input type="tel" id="telefone_empregador" name="telefone_empregador" class="formulario__entrada mlr1" required pattern="[0-9]{10,11}" maxlength="11">
+        </div>
+
+        <div class="centralizado">
+            <input type="button" value="Voltar" onclick="window.location.href='index.php'" class="formulario__botao">
+            <input type="button" value="Avançar" onclick="window.location.href='secaoempregador.php'" class="formulario__botao">
+        </div>
+
+    </form>
+</body>
+
+</html>
