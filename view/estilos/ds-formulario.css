@@ -1,3 +1,12 @@
+
+
+.formulario__titulo {
+    color: var(--cor_destaque);
+    font-weight: normal;
+    font-family: var(--fonte_titulo);
+}
+
+
 .formulario__legenda {
     color: var(--cor_destaque);
     font-size: calc(var(--tamanho_fonte_texto) * 0.65);
@@ -29,6 +38,12 @@
     border-radius: 20px;
     color: var(--cor_tercearia);
     cursor: pointer;
+}
+
+.formulario__agrupamento {
+    border: 0;
+    background-color: var(--cor_secundaria);
+    border-radius: 20px;
 }
 
 .formulario__botao:hover {

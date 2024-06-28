@@ -8,8 +8,8 @@
     <title>Cadastro de Atendimentos</title>
 </head>
 <body class="relativo h100">
-    <form class="formulario absoluto" method="post">
-        <h1>Atendimentos</h1>
+    <form class="formulario absoluto translacao70-70 mr2" method="post">
+        <h1  class="formulario__titulo">Atendimentos</h1>
         <fieldset class="formulario__identificacao">
             <legend class="centralizado formulario__subtitulo">Identificação</legend>
             <div class="atendimento">

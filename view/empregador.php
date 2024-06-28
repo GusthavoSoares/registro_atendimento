@@ -5,14 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./estilos/ds.css">
-    <link rel="stylesheet" href="./estilos/pg-principal.css">
 
     <title>Empregador</title>
 </head>
 
 <body>
-    <form class="formulario w50 h25" method="post" action="processa_login.php">
-        <h1>Empregador</h1>
+    <form class="formulario w50 " method="post" action="processa_login.php">
+        <h1 class="formulario__titulo">Empregador</h1>
 
         <div class="formulario__login">
             <label class="formulario__legenda centralizado mbt1" for="nome_empregador">Nome do Empregador</label>

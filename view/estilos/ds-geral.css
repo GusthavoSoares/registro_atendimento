@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
-    --cor_principal: #4C3BCF;
-    --cor_secundaria: #4B70F5;
-    --cor_tercearia: #3DC2EC;
-    --cor_destaque: #402E7A;
+    --cor_principal: #222831;
+    --cor_secundaria: #393E46;
+    --cor_tercearia: #EEEEEE;
+    --cor_destaque: #00ADB5;
     --fonte_texto: "Open Sans";
     --fonte_titulo: "Roboto";
     --tamanho_fonte_texto: 1.4rem;
@@ -34,7 +34,7 @@ body {
 
 .icone:hover {
     transition: 1s;
-    color: var(--cor_tercearia);
+    color: var(--cor_destaque);
 }
 
 

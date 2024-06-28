@@ -3,12 +3,6 @@
     grid-template-columns: 1fr;
 }
 
-form.formulario {
-    left: 27%;
-}
-
-
-
 input[type=email].formulario__entrada,
 input[type=password].formulario__entrada {
     padding: 0.5%;
