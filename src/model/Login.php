@@ -18,7 +18,7 @@ class Login extends Conexao
             $_SESSION["logado"] = true;
             $_SESSION["emailUsuario"] = $dados[0]['emailUsuario'];
             $_SESSION["loginUsuario"] = $dados[0]['loginUsuario'];
-            header('Location: /home');
+            header('Location: /view/index.php');
         } else{
             header('Location: /login?senha=0');
         }
