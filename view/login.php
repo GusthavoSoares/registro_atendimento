@@ -11,7 +11,7 @@
     <title>Login</title>
 </head>
 <body class="h100">
-    <form class="formulario w50 absoluto translacao50-100" method="post" action="../src/controller/logando.php">
+    <form class="formulario w50 absoluto translacao50-100" action="../src/controller/logando.php" method="post">
         <h1 class="formulario__titulo centralizado">Entrar</h1>
         <fieldset class="formulario__agrupamento">
 

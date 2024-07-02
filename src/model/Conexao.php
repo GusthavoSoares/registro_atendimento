@@ -10,7 +10,7 @@ abstract class Conexao
 
     public function __construct()
     {
-        $this->conexao();
+        //$this->conexao();
     }
 
     protected function conexao()

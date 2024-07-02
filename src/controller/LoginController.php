@@ -16,7 +16,7 @@ class LoginController extends Login
     public function getUser(): void
     {
         if(empty($this->email) || empty($this->senha)){
-            header("Location: view/login.php");
+            header("Location: /view/login.php");
             exit();
         }else {
             $this->autenticar($this->email, $this->senha);

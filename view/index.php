@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if(!array_key_exists('logado', $_SESSION)){
+    if(!array_key_exists('logado', $_SESSION) || $_SESSION['logado'] == false){
         header("location: login.php");
     }
 ?>
@@ -14,7 +14,7 @@
     <title>Cadastro de Atendimentos</title>
 </head>
 <body class="relativo h100">
-    <form class="formulario absoluto translacao70-70 mr2" method="post">
+    <form class="formulario absoluto translacao35-40 mr2" method="post">
         <h1  class="formulario__titulo">Atendimentos</h1>
         <fieldset class="formulario__identificacao">
             <legend class="centralizado formulario__subtitulo">Identificação</legend>
@@ -23,14 +23,14 @@
                 <input type="text" id="identificacaoAtendente" name="identificacaoAtendente" class="formulario__entrada" required minlength="5" maxlength="100">
                 <label class="formulario__legenda" for="identificacaoAtendente">Tipo de atendimento</label>
                 <select class="formulario__selecao" name="tipoAtendimento" required>
-                    <option value="0">Escolha o tipo de atendimento...</option>
-                    <option value="1">Presencial</option>
-                    <option value="2">Whatsapp</option>
-                    <option value="3">Ligação telefônica</option>
-                    <option value="4">E-mail</option>
-                    <option value="5">Redes sociais</option>
-                    <option value="6">Teams</option>
-                    <option value="7">Outra</option>
+                    <option value="tipo">Escolha o tipo de atendimento...</option>
+                    <option value="presencial">Presencial</option>
+                    <option value="whats">Whatsapp</option>
+                    <option value="telefone">Ligação telefônica</option>
+                    <option value="email">E-mail</option>
+                    <option value="rede_social">Redes sociais</option>
+                    <option value="teams">Teams</option>
+                    <option value="outro">Outra</option>
                 </select>
             </div>
             <div class="centralizado formulario__subtitulo">

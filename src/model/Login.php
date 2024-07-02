@@ -4,9 +4,8 @@ class Login extends Conexao
 {
     public function autenticar($email,$senha): void
     {
-        $pdo = new PDO('mysql:host=localhost;dbname=gestaoatendimento', 'root', 'jonassj');
         $sql = "SELECT emailUsuario, loginUsuario, senhaUsuario FROM usuario WHERE emailUsuario = ?; ";
-        $statement = $pdo->prepare($sql);
+        $statement = $this->conexao()->prepare($sql);
         $statement->bindValue(1, $email);
         $statement->execute();
         $dados = $statement->fetchAll(PDO::FETCH_ASSOC);
