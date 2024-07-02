@@ -1,0 +1,13 @@
+
+
+.relativo {
+    position: relative;
+}
+
+.absoluto {
+    position: absolute;
+}
+
+.fixo {
+    position: fixed;
+}

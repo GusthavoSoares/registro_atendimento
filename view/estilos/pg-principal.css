@@ -1,0 +1,48 @@
+form.formulario {
+    border-radius: 20px;
+}
+
+form.formulario>h1 {
+    font-weight: normal;
+    font-size: var(--tamanho_fonte_titulo);
+    text-align: center;
+    color: var(--cor_destaque);
+}
+
+fieldset.formulario__identificacao {
+    border: 0;
+    padding: 2%;
+    background-color: var(--cor_secundaria);
+    border-radius: 20px;
+}
+
+.atendimento {
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    gap: 1%;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.opcoesAtendimentos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    accent-color: var(--cor_tercearia);
+}
+
+
+
+
+@media screen and (max-width:980px) {
+    form.formulario {
+        left: 10%;
+        transform: translate(-1.5%, 40%);
+    }
+
+    .atendimento {
+        grid-template-columns: 100%;
+    }
+
+}

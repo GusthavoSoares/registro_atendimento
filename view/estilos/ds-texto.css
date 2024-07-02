@@ -1,0 +1,55 @@
+.centralizado {
+    text-align: center;
+}
+
+.esquerda {
+    text-align: center;
+}
+
+.justificado {
+    text-align: justify;
+}
+
+.direita {
+    text-align: right;
+}
+
+.negrito {
+    font-weight: bold;
+}
+
+.italico {
+    font-style: italic;
+}
+
+.minusculo {
+    text-transform: lowercase;
+}
+
+.maisculo {
+    text-transform: uppercase;
+}
+
+.capitalizado {
+    text-transform: capitalize;
+}
+
+.rem0_75 {
+    font-size: 0.75rem;
+}
+
+.rem1 {
+    font-size: 1rem;
+}
+
+.rem1_5 {
+    font-size: 1.5rem;
+}
+
+.rem2 {
+    font-size: 2rem;
+}
+
+.rem2_5 {
+    font-size: 2.5rem;
+}

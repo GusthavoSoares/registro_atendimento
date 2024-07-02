@@ -1,0 +1,16 @@
+.translacao50-50 {
+    transform: translate(50%, 50%);
+}
+
+.translacao35-40 {
+    transform: translate(35%, 40%);
+}
+
+
+.translacao70-70 {
+    transform: translate(70%, 70%)
+}
+
+.translacao50-100 {
+    transform: translate(50%, 100%);
+}
