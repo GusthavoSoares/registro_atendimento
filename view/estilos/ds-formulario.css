@@ -1,0 +1,91 @@
+
+
+.formulario__titulo {
+    color: var(--cor_destaque);
+    font-weight: normal;
+    font-family: var(--fonte_titulo);
+}
+
+
+.formulario__legenda {
+    color: var(--cor_destaque);
+    font-size: calc(var(--tamanho_fonte_texto) * 0.65);
+
+}
+
+.formulario__legenda:hover {
+    font-weight: bold;
+    transition: 1s;
+
+}
+
+
+.formulario__subtitulo {
+    background-color: var(--cor_tercearia);
+    color: var(--cor_destaque);
+    font-weight: bold;
+    width: 100%;
+    margin: 1.5% 0;
+    border-radius: 20px;
+
+}
+
+.formulario__botao {
+    margin: 2% 0;
+    padding: 1% 5%;
+    background-color: var(--cor_destaque);
+    border: 0;
+    border-radius: 20px;
+    color: var(--cor_tercearia);
+    cursor: pointer;
+}
+
+.formulario__agrupamento {
+    border: 0;
+    background-color: var(--cor_secundaria);
+    border-radius: 20px;
+}
+
+.formulario__botao:hover {
+    transition: 1s;
+    background-color: var(--cor_tercearia);
+    color: var(--cor_destaque);
+}
+
+.formulario__entrada {
+    outline: 0;
+    border: 0;
+    border-radius: 20px;
+    padding: 1%;
+    background-color: var(--cor_destaque);
+    color: var(--cor_tercearia);
+}
+
+.formulario__entrada:focus {
+    transition: 1s;
+    background-color: var(--cor_tercearia);
+    color: var(--cor_destaque);
+}
+
+.formulario__selecao {
+    background-color: var(--cor_destaque);
+    border: 0;
+    color: var(--cor_tercearia);
+    outline: 0;
+    border-radius: 20px;
+}
+
+@media screen and (max-width:980px) {
+    .formulario__entrada {
+        padding: 0.5%;
+        margin-bottom: 2%;
+    }
+
+    .formulario__selecao {
+        margin-bottom: 2%;
+    }
+
+    .formulario__subtitulo {
+        margin: 0.5%;
+    }
+}
