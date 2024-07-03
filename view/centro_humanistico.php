@@ -18,23 +18,23 @@
         <fieldset>
             <legend>Orientações sobre vida centro humanístico</legend>
             <div>
-                <input type="radio" name="centroHum" required id="atvLudica">
+                <input type="radio" name="centroHum" value="atvLudica" required id="atvLudica">
                 <label for="atvLudica">Atividades lúdicas e pedagógicas</label>
             </div>
             <div>
-                <input type="radio" name="centroHum" required id="recreacao">
+                <input type="radio" name="centroHum" value="recreacao" required id="recreacao">
                 <label for="recreacao">Atividades esportivas e de recreação</label>
             </div>
             <div>
-                <input type="radio" name="centroHum" required id="entidadesPrivadas">
+                <input type="radio" name="centroHum" value="entidadesPrivadas" required id="entidadesPrivadas">
                 <label for="entidadesPrivadas">Entidades parceiras (privadas)</label>
             </div>
             <div>
-                <input type="radio" name="centroHum" required id="entidadesPublicas">
+                <input type="radio" name="centroHum" value="entidadesPublicas" required id="entidadesPublicas">
                 <label for="entidadesPublicas">Entidades parceiras (públicas)</label>
             </div>
             <div>
-                <input type="radio" name="centroHum" required id="eventos">
+                <input type="radio" name="centroHum" value="eventos" required id="eventos">
                 <label for="eventos">Eventos, festas e mutirões sociais</label>
             </div>
             <div>
