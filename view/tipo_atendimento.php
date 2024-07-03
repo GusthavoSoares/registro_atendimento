@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(!array_key_exists('logado', $_SESSION) || $_SESSION['logado'] == false){
+        header("location: login.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -13,7 +20,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <form class="container">
         <h1>Tipo de Atendimento</h1>
 
         <div class="formulario__tipo_atendimento">
@@ -31,33 +38,15 @@
         </div>
         <div id="outra_container" class="formulario__tipo_atendimento hidden">
             <label class="formulario__legenda" for="outra_resposta">Insira sua resposta</label>
-            <input type="text" id="outra_resposta" name="outra_resposta" class="formulario__entrada">
+            <input value="" type="text" id="outra_resposta" name="outra_resposta" class="formulario__entrada">
         </div>
         <div class="centralizado">
-            <input type="button" value="Voltar" onclick="window.location.href='empregador.php'" class="formulario__botao">
-            <input type="button" id="avancar" value="Avançar" onclick="window.location.href='.php'" class="formulario__botao">
-            <input type="submit" id="enviar" value="Enviar" class="formulario__botao hidden">
+            <input value="" type="button" value="Voltar"  class="formulario__botao">
+            <input value="" type="button" id="avancar" value="Avançar" class="formulario__botao">
         </div>
-    </div>
+</form>
 
-    <script>
-        function toggleOutra() {
-            var tipoAtendimento = document.getElementById('tipo_atendimento').value;
-            var outraContainer = document.getElementById('outra_container');
-            var avancarButton = document.getElementById('avancar');
-            var enviarButton = document.getElementById('enviar');
-
-            if (tipoAtendimento === 'outra') {
-                outraContainer.classList.remove('hidden');
-                avancarButton.classList.add('hidden');
-                enviarButton.classList.remove('hidden');
-            } else {
-                outraContainer.classList.add('hidden');
-                avancarButton.classList.remove('hidden');
-                enviarButton.classList.add('hidden');
-            }
-        }
-    </script>
+<script src="https://kit.fontawesome.com/df85906e6a.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

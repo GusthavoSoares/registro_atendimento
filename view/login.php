@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(!array_key_exists('logado', $_SESSION) || $_SESSION['logado'] == false){
+        header("location: login.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,12 +22,12 @@
             <div class="formulario__login">
                 <label class="formulario__legenda centralizado
              mb2" for="login">Login</label>
-                <input type="email" id="login" name="login" class="formulario__entrada mh1" required minlength="5" maxlength="100">
+                <input value="" type="email" id="login" name="login" class="formulario__entrada mh1" required minlength="5" maxlength="100">
             </div>
             <div class="formulario__login">
                 <label class="formulario__legenda centralizado  mb2"  for="senha">Senha</label>
                 <div class="grid90-10">
-                    <input type="password" id="senha" name="senha" class="formulario__entrada mh1 relativo" required minlength="5" maxlength="20">
+                    <input value="" type="password" id="senha" name="senha" class="formulario__entrada mh1 relativo" required minlength="5" maxlength="20">
                     <i class="fa-solid fa-eye icone centralizado mh1" id="olho"></i>
                 </div>
             </div>
