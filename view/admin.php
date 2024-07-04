@@ -1,8 +1,8 @@
 <?php
-    session_start();
-    if(!array_key_exists('logado', $_SESSION) || $_SESSION['logado'] == false){
-        header("location: login.php");
-    }
+    // session_start();
+    // if(!array_key_exists('logado', $_SESSION) || $_SESSION['logado'] == false){
+    //     header("location: login.php");
+    // }
 ?>
 
 <!DOCTYPE html>
@@ -22,24 +22,28 @@
                 <th>Id</th>
                 <th>Email</th>
                 <th>Nome</th>
-                <th>Login</th>
+                <th>Cargo</th>
+                <th>Ativo</th>
             </tr>
             <tr>
                 <td>1</td>
                 <td>gusthavorsoares@gmail.com</td>
                 <td>Gusthavo</td>
                 <td>glsoares</td>
+                <td>admin</td>
+                <th>Ativado</th>
                 <td>
                     <i class="fa-solid fa-pen"></i>
                     <a href="./editar_usuario.php">Editar</a>
                 </td>
                 <td>
                     <i class="fa-solid fa-x"></i>
-                    <a href="./excluir_usuario.php">Excluir</a>
+                    <a href="../src/controller/excluir_usuario.php">Excluir</a>
                 </td>
             </tr>
         </table>
     </section>
+    <a href="./cadastrar_usuario.php">Cadastrar</a>
     <script src="https://kit.fontawesome.com/df85906e6a.js" crossorigin="anonymous"></script>
 </body>
 </html>

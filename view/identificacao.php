@@ -1,8 +1,8 @@
 <?php
-    session_start();
-    if(!array_key_exists('logado', $_SESSION) || $_SESSION['logado'] == false){
-        header("location: login.php");
-    }
+    // session_start();
+    // if(!array_key_exists('logado', $_SESSION) || $_SESSION['logado'] == false){
+    //     header("location: login.php");
+    // }
 ?>
 
 <!DOCTYPE html>
@@ -49,7 +49,7 @@
             <div>
                 <label for="desc_atividade">Descrição da atividade</label>
                 <div>
-                    <textarea required></textarea>
+                    <textarea id="desc_atividade" required></textarea>
                 </div>
             </div>
         </fieldset>
