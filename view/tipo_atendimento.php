@@ -19,31 +19,31 @@ $controle->protecao();
 </head>
 
 <body>
-    <form class="container">
-        <h1>Tipo de Atendimento</h1>
-
+    <form method="post" class="container">
         <div class="formulario__tipo_atendimento">
-            <label class="formulario__legenda" for="tipo_atendimento">Selecionar Tipo de Atendimento</label>
-            <select id="tipo_atendimento" name="tipo_atendimento" class="formulario__entrada" required
-                onchange="toggleOutra()">
-                <option value="" disabled selected>Selecionar sua resposta</option>
-                <option value="carteira_trabalho">Carteira de Trabalho, SD, Vagas</option>
-                <option value="programa_artesanato">Programa Gaúcho do Artesanato</option>
-                <option value="vida_centro_humanistico">Vida Centro Humanístico</option>
-                <option value="orientacoes_empreendedorismo">Orientações sobre empreendedorismo</option>
-                <option value="orientacoes_cursos_qualificacao">Orientações sobre cursos de qualificação</option>
-                <option value="informacoes_mercado_trabalho">Informações sobre mercado de trabalho</option>
-                <option value="outra">Outra</option>
-            </select>
-        </div>
-        <div id="outra_container" class="formulario__tipo_atendimento hidden">
-            <label class="formulario__legenda" for="outra_resposta">Insira sua resposta</label>
-            <input value="" type="text" id="outra_resposta" name="outra_resposta" class="formulario__entrada">
-        </div>
-        <div class="centralizado">
-            <input value="" type="button" value="Voltar" class="formulario__botao">
-            <input value="" type="button" id="avancar" value="Avançar" class="formulario__botao">
-        </div>
+            <fieldset>
+                <legend class="formulario__subtitulo">Tipo de atendimento</legend> 
+                <div>
+                <select id="tipoAtendimento" name="tipoAtendimento" class="formulario__entrada" required>
+                    <option value="" disabled selected>Selecionar sua resposta</option>
+                    <option value="carteira_trabalho">Carteira de Trabalho, SD, Vagas</option>
+                    <option value="programa_artesanato">Programa Gaúcho do Artesanato</option>
+                    <option value="vida_centro_humanistico">Vida Centro Humanístico</option>
+                    <option value="orientacoes_empreendedorismo">Orientações sobre empreendedorismo</option>
+                    <option value="orientacoes_cursos_qualificacao">Orientações sobre cursos de qualificação</option>
+                    <option value="informacoes_mercado_trabalho">Informações sobre mercado de trabalho</option>
+                    <option value="outra">Outra</option>
+                </select>
+             </div>
+            <div id="outra_container" class="formulario__tipo_atendimento hidden">
+                <label class="formulario__legenda" for="outraResposta">Insira sua resposta</label>
+                <input value="" type="text" id="outraResposta" name="outraResposta" class="formulario__entrada">
+            </div>
+            <div class="centralizado">
+                <input value="" type="button" value="Voltar" class="formulario__botao">
+                <input value="" type="button" id="avancar" value="Avançar" class="formulario__botao">
+            </div>
+        </fieldset>
     </form>
 
     <script src="https://kit.fontawesome.com/df85906e6a.js" crossorigin="anonymous"></script>

@@ -21,11 +21,12 @@ $controle->protecao();
             <legend>Usuário</legend>
             <div>
                 <label for="nomeUsuario">Nome</label>
-                <input type="text" value='' required id="nomeUsuario">
+                <input type="text" value='' name="nomeUsuario" required id="nomeUsuario" placeholder="Maria Rosana">
             </div>
             <div>
                 <label for="emailUsuario">E-mail</label>
-                <input type="email" value='' required id="emailUsuario">
+                <input type="email" value='' name="emailUsuario" required id="emailUsuario"
+                placeholder="exemplo@gmail.com">
             </div>
             <div>
                 <fieldset>
@@ -39,7 +40,7 @@ $controle->protecao();
         <fieldset>
             <legend>Ativo</legend>
             <div>
-                <select required>
+                <select name="ativo" required>
                     <option value="Ativado">Ativado</option>
                     <option value="Desativado">Desativado</option>
                 </select>

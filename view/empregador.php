@@ -20,27 +20,26 @@ $controle->protecao();
         <h1 class="formulario__titulo">Empregador</h1>
 
         <div class="formulario__login">
-            <label class="formulario__legenda centralizado mbt1" for="nome_empregador">Nome do Empregador</label>
-            <input type="text" id="nome_empregador" name="nome_empregador" class="formulario__entrada mlr1" value=""
+            <label class="formulario__legenda centralizado mbt1" for="nomeEmpregador">Nome do Empregador</label>
+            <input type="text" id="nomeEmpregador" name="nomeEmpregador" class="formulario__entrada mlr1" value=""
                 required maxlength="100">
         </div>
 
         <div class="formulario__login">
             <label class="formulario__legenda centralizado mbt1" for="cnpj_empregador">CNPJ do Empregador</label>
-            <input type="text" id="cnpj_empregador" name="cnpj_empregador" class="formulario__entrada mlr1" value=""
-                required pattern="[0-9]{14}" maxlength="14">
+            <input type="text" id="cnpjEmpregador" name="cnpjEmpregador" class="formulario__entrada mlr1" value=""
+                required pattern="^[0-9]{14}$" maxlength="14">
         </div>
 
         <div class="formulario__login">
-            <label class="formulario__legenda centralizado mbt1" for="telefone_empregador">Telefone de Contato:</label>
-            <input type="tel" id="telefone_empregador" name="telefone_empregador" value=""
-                class="formulario__entrada mlr1" required pattern="[0-9]{10,11}" maxlength="11" value="">
+            <label class="formulario__legenda centralizado mbt1" for="telefone_empregador">Telefone de Contato</label>
+            <input type="tel" id="telefone_empregador" name="telefoneEmpregador" value=""
+                class="formulario__entrada mlr1" required pattern="^[0-9]{10,11}$" maxlength="11" value="" placeholder="51123456789">
         </div>
 
         <div class="centralizado">
             <a href="./index.php">Voltar</a>
-            <input type="submit" value="Próximo" onclick="window.location.href='secaoempregador.php'"
-                class="formulario__botao" value="">
+            <input type="submit" value="Próximo" class="formulario__botao">
         </div>
 
     </form>

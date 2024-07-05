@@ -16,11 +16,12 @@
             <legend>Usuário</legend>
             <div>
                 <label for="nomeUsuario">Nome</label>
-                <input type="text" value='' required id="nomeUsuario"  >
+                <input type="text" value='' name="nomeUsuario" required id="nomeUsuario" placeholder="João da Silva"  >
             </div>
             <div>
                 <label for="emailUsuario">E-mail</label>
-                <input type="email" value='' required id="emailUsuario" >
+                <input type="email" value='' name="emailUsuario" required id="emailUsuario"
+                placeholder="exemploEmail@gmail.com" >
             </div>
             <div>
             <fieldset>
@@ -34,7 +35,7 @@
             <fieldset>
             <legend>Ativo</legend>
                 <div>
-                    <select required>
+                    <select required name="ativo">
                         <option value="Ativado">Ativado</option>
                         <option value="Desativado">Desativado</option>
                     </select>

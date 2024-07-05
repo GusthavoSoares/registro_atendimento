@@ -89,7 +89,6 @@ $controle->protecao();
             <div>
                 <label for="descricaoAtividade">Descrição da atividade</label>
                 <div>
-
                     <textarea required id="descricaoAtividade" name="descricaoAtividade" value=""></textarea>
                 </div>
             </div>

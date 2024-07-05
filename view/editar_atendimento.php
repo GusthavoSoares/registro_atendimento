@@ -24,7 +24,7 @@
             </fieldset>
             <fieldset>
                 <legend>Tipo de Atendimento</legend>
-                <select value="tipoAtendimento" required>
+                <select name="tipoAtendimento" required>
                     <option value="carteiraTrabalho">Carteira de Trabalho, SD, Vagas</option>
                     <option value="programaGauchoArtesanato">Programa Gaúcho de Artesanato</option>
                     <option value="centroHumanistico">Vida Centro Humanístico</option>

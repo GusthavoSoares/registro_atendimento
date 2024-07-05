@@ -20,7 +20,7 @@ $controle->protecao();
             <legend>Identificação</legend>
             <div>
                 <label for="nomeIdentificacao">Nome</label>
-                <input type="text" value="" required id="nomeIdentificacao">
+                <input type="text" value="" name="nomeIdentificacao" required id="nomeIdentificacao">
             </div>
             <fieldset>
                 <legend>Tipo de cadastro</legend>
@@ -34,16 +34,17 @@ $controle->protecao();
                 </div>
                 <div>
                     <input type="text" required minlength="3" value="" id="cpf" name="identificadorUnico"
-                        placeholder="Informe seu CPF ou CNPJ ">
+                        placeholder="Informe seu CPF ou CNPJ " pattern="^[0-9]{11,14}$" maxlength="14" minlength="11">
                 </div>
             </fieldset>
             <div>
                 <label for="telefoneContatoMercado">Telefone</label>
-                <input type="tel" minlength="3" value="" id="telefoneContatoMercado" name="telefoneContatoMercado">
+                <input type="tel" minlength="3" value="" id="telefoneContatoMercado" name="telefoneContatoMercado"
+                    pattern="^[0-9]{10,11}$" placeholder="51123456789">
             </div>
             <div>
                 <label for="emailContatoMercado">E-mail</label>
-                <input type="tel" minlength="3" value="" id="emailContatoMercado" name="emailContatoMercado">
+                <input type="tel" minlength="3" value="" id="emailContatoMercado" name="emailContatoMercado" placeholder="exemplo@gmail.com">
             </div>
             <div>
                 <label for="desc_atividade">Descrição da atividade</label>

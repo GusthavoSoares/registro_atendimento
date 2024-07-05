@@ -35,7 +35,7 @@ $controle->protecao();
                 </div>
                 <div>
                     <input type="text" required minlength="3" id="cpf" name="identificadorUnico"
-                        placeholder="Informe seu CPF ou CNPJ " value="">
+                        placeholder="Informe seu CPF ou CNPJ" pattern="^[0-9]{11,14}$" maxlength="14" minlength="11" value="">
                 </div>
             </fieldset>
 
@@ -76,9 +76,9 @@ $controle->protecao();
 
             </fieldset>
             <div>
-                <label for="desc_atividade">Descrição da atividade</label>
+                <label for="descAtividade">Descrição da atividade</label>
                 <div>
-                    <textarea></textarea>
+                    <textarea name="descAtividade" id="descAtividade"></textarea>
                 </div>
 
             </div>

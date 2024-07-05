@@ -24,7 +24,7 @@ $controle->protecao();
             </div>
             <div>
                 <label for="cpf">CPF</label>
-                <input value="" type="text" required minlength="3" id="cpf" name="cpfTrabalhador">
+                <input value="" type="text" required maxlength="11" minlength="11" id="cpf" name="cpfTrabalhador">
             </div>
             <div>
                 <label for="telefoneContato">Telefone de contato</label>

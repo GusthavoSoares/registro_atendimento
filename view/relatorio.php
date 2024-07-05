@@ -31,8 +31,8 @@ if ($_REQUEST['exp'] === 'pdf') {
             <label for="csv">CSV</label>
         </fieldset>
         <fieldset>
-            <legend>Tipo de atendimento</legend>
-            <select>
+            <legend>Forma de atendimento</legend>
+            <select name="formaAtendimento">
                 <option value="presencial">Presencial</option>
                 <option value="whatsapp">Whatsapp</option>
                 <option value="telefone">Ligação telefônica</option>
@@ -43,8 +43,8 @@ if ($_REQUEST['exp'] === 'pdf') {
             </select>
         </fieldset>
         <fieldset>
-            <legend>Público</legend>
-            <select>
+            <legend>Tipo de solicitante</legend>
+            <select name="solicitante">
                 <option value="empregador">Empregador</option>
                 <option value="trabalhador">Trabalhador</option>
                 <option value="out_agen">Outras agências</option>
@@ -56,7 +56,7 @@ if ($_REQUEST['exp'] === 'pdf') {
         </fieldset>
         <fieldset>
             <legend>Tipo de atendimento</legend>
-            <select>
+            <select name="tipoAtendimento">
                 <option value="trabalho">Carteira de Trabalho, SD, Vagas</option>
                 <option value="pg_artesanato">Programa Gaúcho do Artesanato</option>
                 <option value="vida_centro">Vida Centro Humanístico</option>
@@ -70,13 +70,13 @@ if ($_REQUEST['exp'] === 'pdf') {
             <legend>Período</legend>
 
             <div>
-                <label for="data_ini">Data inicial</label>
-                <input value="" type="date" id="data_ini">
+                <label for="dataInicial">Data inicial</label>
+                <input value="" type="date" name="dataInicial" id="dataInicial">
             </div>
 
             <div>
-                <label for="data_fim">Data final</label>
-                <input value="" type="date" id="data_fim">
+                <label for="dataFim">Data final</label>
+                <input value="" type="date" name="dataFim" id="dataFim">
             </div>
         </fieldset>
         <div>
