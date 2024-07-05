@@ -1,9 +1,9 @@
 <?php
-    session_start();
-    if(!array_key_exists('logado', $_SESSION) || $_SESSION['logado'] == false){
-        header("location: login.php");
-    }
+    require_once __DIR__ . "/../src/controller/SessaoController.php";
+    $controle = new SessaoController();
+    $controle->protecao();
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -20,7 +20,7 @@
             <legend class="centralizado formulario__subtitulo">Identificação</legend>
             <div class="atendimento">
                 <label class="formulario__legenda" for="identificacaoAtendente">Nome do Atendente</label>
-                <input type="text" id="identificacaoAtendente" name="identificacaoAtendente" class="formulario__entrada" required minlength="5" maxlength="100">
+                <input type="text" value="" id="identificacaoAtendente" name="identificacaoAtendente" class="formulario__entrada" required minlength="5" maxlength="100">
                 <label class="formulario__legenda" for="identificacaoAtendente">Tipo de atendimento</label>
                 <select class="formulario__selecao" name="tipoAtendimento" required>
                     <option value="tipo">Escolha o tipo de atendimento...</option>
@@ -38,27 +38,27 @@
             </div>
                 <div class="opcoesAtendimentos">
                 <div class="opcaoFormulario">
-                    <input type="radio" name="pessoasAtendimento" id="empregador" required>
+                    <input value="" type="radio" name="pessoasAtendimento" id="empregador" required>
                     <label for="empregador" class="formulario__legenda">Empregador</label>
                 </div>
                 <div class="opcaoFormulario">
-                    <input type="radio" name="pessoasAtendimento" id="trabalhador" required>
+                    <input value="" type="radio" name="pessoasAtendimento" id="trabalhador" required>
                     <label for="trabalhador" class="formulario__legenda">Trabalhador</label>
                 </div>
                 <div class="opcaoFormulario">
-                    <input type="radio" name="pessoasAtendimento" id="ads" required> 
+                    <input value="" type="radio" name="pessoasAtendimento" id="ads" required> 
                     <label for="ads" class="formulario__legenda">ADS</label> 
                 </div>
                 <div class="opcaoFormulario">
-                    <input type="radio" name="pessoasAtendimento" id="setores" required>
+                    <input value="" type="radio" name="pessoasAtendimento" id="setores" required>
                     <label for="setores" class="formulario__legenda">Setores da FGTAS</label>
                 </div>
                 <div class="opcaoFormulario">
-                    <input type="radio" name="pessoasAtendimento" id="mercadoTrabalho" required>
+                    <input value="" type="radio" name="pessoasAtendimento" id="mercadoTrabalho" required>
                     <label for="mercadoTrabalho" class="formulario__legenda">Interessado em informações sobre o Mercado de trabalho</label>
                 </div>
                 <div class="opcaoFormulario">
-                    <input type="radio" name="pessoasAtendimento" class="formulario__legenda" id="outro" required>
+                    <input value="" type="radio" name="pessoasAtendimento" class="formulario__legenda" id="outro" required>
                     <label for="outro" class="formulario__legenda">Outro</label>
                 </div>
             </div>

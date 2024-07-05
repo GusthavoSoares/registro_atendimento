@@ -1,9 +1,21 @@
+<?php
+
+    if($_REQUEST['exp'] === 'pdf'){
+        header("Location: /../src/controller/relatorios/gerapdf.php");
+    }elseif($_REQUEST['exp'] === 'csv'){
+        header("Location: /../src/controller/relatorios/geracsv.php");
+    }else{
+        echo 'ERRO';
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilos/ds.css">
     <title>Relatórios</title>
 </head>
 
@@ -13,9 +25,9 @@
 
         <fieldset>
             <legend>Tipo de exportação</legend>
-            <input type="radio" id="pdf" name="exp">
+            <input  value="pdf" type="radio" id="pdf" name="exp">
             <label for="pdf">PDF</label>
-            <input type="radio" id="csv" name="exp">
+            <input value="csv" type="radio" id="csv" name="exp">
             <label for="csv">CSV</label>
         </fieldset>
         <fieldset>
@@ -59,18 +71,19 @@
 
             <div>
                 <label for="data_ini">Data inicial</label>
-                <input type="date" id="data_ini">
+                <input value="" type="date" id="data_ini">
             </div>
 
             <div>
                 <label for="data_fim">Data final</label>
-                <input type="date" id="data_fim">
+                <input value="" type="date" id="data_fim">
             </div>
         </fieldset>
         <div>
             <input type="submit" value="Exportar">
         </div>
     </form>
+    <script src="https://kit.fontawesome.com/df85906e6a.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

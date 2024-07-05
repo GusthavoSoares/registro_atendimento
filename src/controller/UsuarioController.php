@@ -8,11 +8,12 @@ class UsuarioController extends Conexao
         return new Usuario($dados['idUsuario'], $dados['nomeUsuario'], $dados['emailUsuario'], $dados['loginUsuario']);
     }
 
-    public function buscar(): array
+    public function buscar()
     {
         $sql = "SELECT idUsuario, nomeUsuario, emailUsuario, loginUsuario FROM usuario";
         $stmt = $this->conexao()->query($sql);
-        $dados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $dados = $stmt->fetchAll();
 
         $dadosUsuario = array_map(function($item)
         {

@@ -3,7 +3,7 @@
 abstract class Conexao
 {
     private $host = 'localhost';
-    private $dbname = 'gestaoatendimento';
+    private $dbname = 'atendimentos';
     private $usuario = 'root';
     private $senha = 'jonassj';
     protected $pdo;

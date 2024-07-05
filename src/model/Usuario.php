@@ -2,33 +2,39 @@
 
 class Usuario
 {
-    private $idUsuario;
-    private $nomeUsuario;
-    private $emailUsuario;
-    private $loginUsuario;
+    private string $nome;
+    private string $email;
+    private string $cargo;
+    private string $ativo;
+    private $senha;
 
-    public function __construct($idUsuario, $nomeUsuario, $emailUsuario, $loginUsuario)
+    public function __construct($nome, $email, $cargo, $ativo = 'S', $senha = null)
     {
-        $this->idUsuario = $idUsuario;
-        $this->nomeUsuario = $nomeUsuario;
-        $this->emailUsuario = $emailUsuario;
-        $this->loginUsuario = $loginUsuario;
+        $this->nome = $nome;
+        $this->email = $email;
+        $this->cargo = $cargo;
+        $this->ativo = $ativo;
+        $this->senha = $senha;
     }
 
-    public function getId()
-    {
-        return $this->idUsuario;
-    }
     public function getNome()
     {
-        return $this->nomeUsuario;
+        return $this->nome;
     }
     public function getEmail()
     {
-        return $this->emailUsuario;
+        return $this->email;
     }
-    public function getLogin()
+    public function getSenha()
     {
-        return $this->loginUsuario;
+        return $this->senha;
+    }
+    public function getCargo()
+    {
+        return $this->cargo;
+    }
+    public function getAtivo()
+    {
+        return $this->ativo;
     }
 }

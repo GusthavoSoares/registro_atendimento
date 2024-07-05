@@ -1,9 +1,9 @@
 <?php
-    require_once __DIR__ . '/src/model/Conexao.php';
-    require_once __DIR__ . '/src/model/Usuario.php';
-    require_once __DIR__ . '/src/controller/UsuarioController.php';
+    require_once __DIR__ . '/../../model/Conexao.php';
+    require_once __DIR__ . '/../../model/Usuario.php';
+    require_once __DIR__ . '/../../repositorio/UsuarioRepositorio.php';
 
-    $user = new UsuarioController();
+    $user = new UsuarioRepositorio();
     $usuarios = $user->buscar();
 ?>
 <!DOCTYPE html>
@@ -45,8 +45,8 @@ tr:nth-child(even) {
                 <th>Nome</th>
                 <th>CPF</th>
                 <th>Email</th>
-                <th>Nickname</th>
-                <th>Data de Nascimento</th>
+                <th>Cargo</th>
+                <th>ativo</th>
             </tr>
         </thead>
         <tbody>
@@ -55,8 +55,8 @@ tr:nth-child(even) {
                 <td><?= $usuario->getNome() ?></td>
                 <td>123.456.789-00</td>
                 <td><?= $usuario->getEmail() ?></td>
-                <td><?= $usuario->getLogin() ?></td>
-                <td>01/01/1980</td>
+                <td><?= $usuario->getCargo() ?></td>
+                <td><?= $usuario->getAtivo() ?></td>
             </tr>
             <?php endforeach; ?>
         </tbody>
