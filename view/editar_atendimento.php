@@ -1,10 +1,8 @@
 <?php
-    // session_start();
-    // if(!array_key_exists('logado', $_SESSION) || $_SESSION['logado'] == false){
-    //     header("location: login.php");
-    // }
+    require_once __DIR__ . "/../src/controller/SessaoController.php";
+    $controle = new SessaoController();
+    $controle->protecao();
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">

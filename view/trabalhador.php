@@ -1,8 +1,7 @@
 <?php
-    // session_start();
-    // if(!array_key_exists('logado', $_SESSION) || $_SESSION['logado'] == false){
-    //     header("location: login.php");
-    // }
+require_once __DIR__ . "/../src/controller/SessaoController.php";
+$controle = new SessaoController();
+$controle->protecao();
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +28,8 @@
             </div>
             <div>
                 <label for="telefoneContato">Telefone de contato</label>
-                <input value="" type="text" required minlength="3" id="telefoneContato" name="telefoneContatoTrabalhador">
+                <input value="" type="text" required minlength="3" id="telefoneContato"
+                    name="telefoneContatoTrabalhador">
             </div>
         </fieldset>
         <div>

@@ -1,45 +1,41 @@
-CREATE DATABASE GerenciadorAtendimentos;
+CREATE DATABASE atendimentos;
 
-USE GerenciadorAtendimentos;
+USE atendimentos;
 
-CREATE TABLE atendente (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE usuario(
+	id INT PRIMARY KEY,
+    nome VARCHAR(100) DEFAULT '',
+    email VARCHAR(100) NOT NULL,
+    senha VARCHAR(100) NOT NULL,
+    cargo ENUM('usuario', 'admin') NOT NULL DEFAULT 'usuario',
+    ativo ENUM('Ativado', 'Desativado') NOT NULL DEFAULT 'Ativado'
+);
+
+CREATE TABLE solicitante(
+	id INT PRIMARY KEY, 
+    id_usuario INT NOT NULL,
+	tipo_pessoa VARCHAR(255) NOT NULL,
+    tipo_solicitante VARCHAR(255) NOT NULL,
+    identificador_unico VARCHAR(255) NOT NULL,
+    forma_atendimento VARCHAR(255) NOT NULL,
     nome VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL UNIQUE,
-    senha VARCHAR(255) NOT NULL,
-    nivel_acesso ENUM('admin', 'atendente') NOT NULL
+    email VARCHAR(255) NOT NULL,
+    telefone VARCHAR(255) NOT NULL,
+    tipo_informacao VARCHAR(255) NOT NULL DEFAULT '',
+    descricao VARCHAR(255) NOT NULL DEFAULT '',
+    ativo ENUM('Ativado', 'Desativado') NOT NULL DEFAULT 'Ativado',
+    data_registro DATETIME NOT NULL,
+	FOREIGN KEY (id_usuario) REFERENCES usuario(id)
 );
 
-CREATE TABLE formaAtendimento (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    descricao VARCHAR(255) NOT NULL
+CREATE TABLE atendimento(
+	id INT PRIMARY KEY,
+    id_solicitante INT NOT NULL,
+	informacao VARCHAR(255) NOT NULL,
+    data_registro DATETIME NOT NULL,
+    FOREIGN KEY (id_solicitante) REFERENCES solicitante(id)    
 );
 
-
-CREATE TABLE solicitante (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    descricao VARCHAR(255) NOT NULL
-);
-
-
-CREATE TABLE tipoAtendimento (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    solicitante_id INT NOT NULL,
-    descricao VARCHAR(255) NOT NULL,
-    FOREIGN KEY (solicitante_id) REFERENCES solicitante(id)
-);
-
-
-CREATE TABLE atendimento (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    atendente_id INT NOT NULL,
-    forma_atendimento_id INT NOT NULL,
-    solicitante_id INT NOT NULL,
-    tipo_atendimento_id INT NOT NULL,
-    detalhes TEXT,
-    data_hora DATETIME NOT NULL,
-    FOREIGN KEY (atendente_id) REFERENCES atendente(id),
-    FOREIGN KEY (forma_atendimento_id) REFERENCES formaAtendimento(id),
-    FOREIGN KEY (solicitante_id) REFERENCES solicitante(id),
-    FOREIGN KEY (tipo_atendimento_id) REFERENCES tipoAtendimento(id)
-);
+CREATE INDEX data_solicitante_index ON solicitante(data_registro);
+CREATE INDEX data_atendimento_index ON atendimento(data_registro);
+CREATE INDEX email_solicitante_index ON solicitante(email);

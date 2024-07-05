@@ -1,8 +1,7 @@
 <?php
-    // session_start();
-    // if(!array_key_exists('logado', $_SESSION) || $_SESSION['logado'] == false){
-    //     header("location: login.php");
-    // }
+require_once __DIR__ . "/../src/controller/SessaoController.php";
+$controle = new SessaoController();
+$controle->protecao();
 ?>
 
 <!DOCTYPE html>
@@ -22,20 +21,20 @@
 
         <div class="formulario__login">
             <label class="formulario__legenda centralizado mbt1" for="nome_empregador">Nome do Empregador</label>
-            <input type="text" id="nome_empregador" name="nome_empregador" class="formulario__entrada mlr1"  value="" required
-                maxlength="100">
+            <input type="text" id="nome_empregador" name="nome_empregador" class="formulario__entrada mlr1" value=""
+                required maxlength="100">
         </div>
 
         <div class="formulario__login">
             <label class="formulario__legenda centralizado mbt1" for="cnpj_empregador">CNPJ do Empregador</label>
-            <input type="text" id="cnpj_empregador" name="cnpj_empregador" class="formulario__entrada mlr1" value="" required
-                pattern="[0-9]{14}" maxlength="14">
+            <input type="text" id="cnpj_empregador" name="cnpj_empregador" class="formulario__entrada mlr1" value=""
+                required pattern="[0-9]{14}" maxlength="14">
         </div>
 
         <div class="formulario__login">
             <label class="formulario__legenda centralizado mbt1" for="telefone_empregador">Telefone de Contato:</label>
-            <input type="tel" id="telefone_empregador" name="telefone_empregador"  value="" class="formulario__entrada mlr1"
-                required pattern="[0-9]{10,11}" maxlength="11" value="">
+            <input type="tel" id="telefone_empregador" name="telefone_empregador" value=""
+                class="formulario__entrada mlr1" required pattern="[0-9]{10,11}" maxlength="11" value="">
         </div>
 
         <div class="centralizado">

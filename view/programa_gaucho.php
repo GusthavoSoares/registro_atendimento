@@ -1,8 +1,7 @@
 <?php
-    // session_start();
-    // if(!array_key_exists('logado', $_SESSION) || $_SESSION['logado'] == false){
-    //     header("location: login.php");
-    // }
+require_once __DIR__ . "/../src/controller/SessaoController.php";
+$controle = new SessaoController();
+$controle->protecao();
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +32,7 @@
             </div>
             <div>
                 <label for="portal">Inscrição e acesso ao portal do artesanato gaúcho</label>
-                <input value="" type="radio"  name="artesanato" required id="portal">
+                <input value="" type="radio" name="artesanato" required id="portal">
             </div>
             <div>
                 <label for="outrosServicos">Outros serviços</label>

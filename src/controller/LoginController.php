@@ -11,7 +11,6 @@ class LoginController extends Login
         $this->senha = $senha;
     }
 
-
     // Validação de inputs
     public function getUser(): void
     {
@@ -20,6 +19,14 @@ class LoginController extends Login
             exit();
         }else {
             $this->autenticar($this->email, $this->senha);
+        }
+    }
+
+    public static function protecao(): void
+    {
+        session_start();
+        if(!array_key_exists('logado', $_SESSION) || $_SESSION['logado'] == false){
+            header("location: login.php");
         }
     }
 }

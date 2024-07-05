@@ -1,8 +1,7 @@
 <?php
-    // session_start();
-    // if(!array_key_exists('logado', $_SESSION) || $_SESSION['logado'] == false){
-    //     header("location: login.php");
-    // }
+require_once __DIR__ . "/../src/controller/SessaoController.php";
+$controle = new SessaoController();
+$controle->protecao();
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +24,8 @@
 
         <div class="formulario__tipo_atendimento">
             <label class="formulario__legenda" for="tipo_atendimento">Selecionar Tipo de Atendimento</label>
-            <select id="tipo_atendimento" name="tipo_atendimento" class="formulario__entrada" required onchange="toggleOutra()">
+            <select id="tipo_atendimento" name="tipo_atendimento" class="formulario__entrada" required
+                onchange="toggleOutra()">
                 <option value="" disabled selected>Selecionar sua resposta</option>
                 <option value="carteira_trabalho">Carteira de Trabalho, SD, Vagas</option>
                 <option value="programa_artesanato">Programa Gaúcho do Artesanato</option>
@@ -41,12 +41,12 @@
             <input value="" type="text" id="outra_resposta" name="outra_resposta" class="formulario__entrada">
         </div>
         <div class="centralizado">
-            <input value="" type="button" value="Voltar"  class="formulario__botao">
+            <input value="" type="button" value="Voltar" class="formulario__botao">
             <input value="" type="button" id="avancar" value="Avançar" class="formulario__botao">
         </div>
-</form>
+    </form>
 
-<script src="https://kit.fontawesome.com/df85906e6a.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/df85906e6a.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

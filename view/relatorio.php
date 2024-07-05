@@ -1,8 +1,12 @@
 <?php
-    // session_start();
-    // if(!array_key_exists('logado', $_SESSION) || $_SESSION['logado'] == false){
-    //     header("location: login.php");
-    // }
+
+if ($_REQUEST['exp'] === 'pdf') {
+    header("Location: /../src/controller/relatorios/gerapdf.php");
+} elseif ($_REQUEST['exp'] === 'csv') {
+    header("Location: /../src/controller/relatorios/geracsv.php");
+} else {
+    echo 'ERRO';
+}
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +25,7 @@
 
         <fieldset>
             <legend>Tipo de exportação</legend>
-            <input  value="" type="radio" id="pdf" name="exp">
+            <input value="" type="radio" id="pdf" name="exp">
             <label for="pdf">PDF</label>
             <input value="" type="radio" id="csv" name="exp">
             <label for="csv">CSV</label>

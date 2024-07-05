@@ -3,14 +3,14 @@
 abstract class Conexao
 {
     private $host = 'localhost';
-    private $dbname = 'gestaoatendimento';
+    private $dbname = 'atendimentos';
     private $usuario = 'root';
     private $senha = 'jonassj';
     protected $pdo;
 
     public function __construct()
     {
-        //$this->conexao();
+        $this->conexao();
     }
 
     protected function conexao()

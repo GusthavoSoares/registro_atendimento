@@ -4,20 +4,20 @@ class Login extends Conexao
 {
     public function autenticar($email,$senha): void
     {
-        $sql = "SELECT emailUsuario, loginUsuario, senhaUsuario FROM usuario WHERE emailUsuario = ?; ";
-        $statement = $this->conexao()->prepare($sql);
-        $statement->bindValue(1, $email);
-        $statement->execute();
-        $dados = $statement->fetchAll(PDO::FETCH_ASSOC);
+        $sql = "SELECT nome, email, senha FROM usuario WHERE email = ?; ";
+        $stmt = $this->conexao()->prepare($sql);
+        $stmt->bindValue(1, $email);
+        $stmt->execute();
+        $dados = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        $senhaVerificada = password_verify($senha, $dados[0]['senhaUsuario'] ?? '');
+        $senhaVerificada = password_verify($senha, $dados[0]['senha'] ?? '');
 
         if($senhaVerificada){
             session_start();
             $_SESSION["logado"] = true;
-            $_SESSION["emailUsuario"] = $dados[0]['emailUsuario'];
-            $_SESSION["loginUsuario"] = $dados[0]['loginUsuario'];
-            header('Location: /view/index.php');
+            $_SESSION["nome"] = $dados[0]['nome'];
+            $_SESSION["email"] = $dados[0]['email'];
+            header('Location: /view/home.php');
         } else{
             header('Location: /login?senha=0');
         }
