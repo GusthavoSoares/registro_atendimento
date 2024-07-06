@@ -1,12 +1,12 @@
 <?php
-require_once __DIR__ . "/../src/controller/SessaoController.php";
-$controle = new SessaoController();
-$controle->protecao();
+// require_once __DIR__ . "/../src/controller/SessaoController.php";
+// $controle = new SessaoController();
+// $controle->protecao();
 ?>
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -17,28 +17,28 @@ $controle->protecao();
 
 <body>
     <form method="post">
-        <fieldset>
-            <legend>Informações sobre carteira de trabalho, seguro-desemprego, vagas</legend>
+        <fieldset class="formulario__campo">
+            <legend class="formulario__legenda">Informações sobre carteira de trabalho, seguro-desemprego, vagas</legend>
             <div>
-                <input type="radio" name="trabalho" value="" required id="carteiraTrab">
-                <label for="carteiraTrab">Carteira de trabalho física e digital</label>
+                <input class="formulario__opcao" type="radio" name="trabalho" value="" required id="carteiraTrab">
+                <label class="formulario__etiqueta" for="carteiraTrab">Carteira de trabalho física e digital</label>
             </div>
             <div>
-                <input type="radio" name="trabalho" value="" required id="seguroDesemprego">
-                <label for="seguroDesemprego">Direito e benefício de seguro-desemprego</label>
+                <input class="formulario__opcao" type="radio" name="trabalho" value="" required id="seguroDesemprego">
+                <label class="formulario__etiqueta" for="seguroDesemprego">Direito e benefício de seguro-desemprego</label>
             </div>
             <div>
-                <input type="radio" name="trabalho" value="" required id="vagas">
-                <label for="vagas">Vagas - cadastramento, registro de retorno, administração</label>
+                <input class="formulario__opcao" type="radio" name="trabalho" value="" required id="vagas">
+                <label class="formulario__etiqueta" for="vagas">Vagas - cadastramento, registro de retorno, administração</label>
             </div>
             <div>
-                <input type="radio" name="trabalho" value="" required id="outrosServicos">
-                <label for="outrosServicos">Outros serviços</label>
+                <input class="formulario__opcao" type="radio" name="trabalho" value="" required id="outrosServicos">
+                <label class="formulario__etiqueta" for="outrosServicos">Outros serviços</label>
             </div>
         </fieldset>
         <div>
-            <a href="./tipo_atendimento.php">Voltar</a>
-            <input type="submit" value="Enviar">
+            <a href="./tipo_atendimento.php" class="formulario__botao__secundario formulario__botao__padrao" >Voltar</a>
+            <input type="submit" value="Enviar" class="formulario__botao formulario__botao__padrao">
         </div>
     </form>
     <script src="https://kit.fontawesome.com/df85906e6a.js" crossorigin="anonymous"></script>

@@ -12,27 +12,27 @@
     <title>Login</title>
 </head>
 <body class="h100">
-    <form class="formulario w50 absoluto translacao50-100" method="post">
+    <form class="formulario" method="post">
         <h1 class="formulario__titulo centralizado">Entrar</h1>
-        <fieldset class="formulario__agrupamento">
-
-            <div class="formulario__login">
-                <label class="formulario__legenda centralizado
-             mb2" for="login">Login</label>
-                <input value="" type="email" id="login" name="login" class="formulario__entrada mh1" required minlength="5" maxlength="100">
-            </div>
-            <div class="formulario__login">
-                <label class="formulario__legenda centralizado  mb2"  for="senha">Senha</label>
-                <div class="grid90-10">
-                    <input value="" type="password" id="senha" name="senha" class="formulario__entrada mh1 relativo" required minlength="5" maxlength="20">
+        <fieldset class="formulario__campo ">
+            <section>
+                <label class="formulario__etiqueta" for="login">Login</label>
+                <div class="mv0-5">
+                 <input value="" type="email" id="login" name="login" class="formulario__entrada" required minlength="5" maxlength="100">
+                </div>
+            </section>
+            <section>
+                <label class="formulario__etiqueta"  for="senha">Senha</label>
+                <div class="mv0-5">
+                    <input value="" type="password" id="senha" name="senha" class="formulario__entrada" required minlength="5" maxlength="20">
                     <i class="fa-solid fa-eye icone centralizado mh1" id="olho"></i>
                 </div>
-            </div>
-            <div class="centralizado">
-                <input type="submit" value="Logar" class="formulario__botao">
-            </div>
+            </section>
             
         </fieldset>
+        <div class="centralizado mv0-5">
+            <input type="submit" value="Logar" class="formulario__botao formulario__botao__padrao">
+        </div>
     </form>
     <script src="https://kit.fontawesome.com/df85906e6a.js" crossorigin="anonymous"></script>
     <script src="./js/olho.js"></script>

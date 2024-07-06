@@ -14,7 +14,7 @@ CREATE TABLE usuario(
 CREATE TABLE solicitante(
 	id INT PRIMARY KEY, 
     id_usuario INT NOT NULL,
-	tipo_pessoa VARCHAR(255) NOT NULL,
+	tipo_pessoa ENUM("pessoa_fisica", "pessoa_juridica") NOT NULL,
     tipo_solicitante VARCHAR(255) NOT NULL,
     identificador_unico VARCHAR(255) NOT NULL,
     forma_atendimento VARCHAR(255) NOT NULL,
@@ -31,7 +31,8 @@ CREATE TABLE solicitante(
 CREATE TABLE atendimento(
 	id INT PRIMARY KEY,
     id_solicitante INT NOT NULL,
-	informacao VARCHAR(255) NOT NULL,
+    tipo VARCHAR(255) NOT NULL,
+	informacao VARCHAR(255) DEFAULT '',
     data_registro DATETIME NOT NULL,
     FOREIGN KEY (id_solicitante) REFERENCES solicitante(id)    
 );

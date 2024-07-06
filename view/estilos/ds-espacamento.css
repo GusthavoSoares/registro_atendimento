@@ -45,3 +45,11 @@
 .mv1 {
     margin: 1% 0;
 }
+
+.mv0-5 {
+    margin: 0.5% 0;
+}
+
+.sem_borda {
+    border: 0;
+}

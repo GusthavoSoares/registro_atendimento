@@ -1,7 +1,7 @@
 <?php
-require_once __DIR__ . "/../src/controller/SessaoController.php";
-$controle = new SessaoController();
-$controle->protecao();
+// require_once __DIR__ . "/../src/controller/SessaoController.php";
+// $controle = new SessaoController();
+// $controle->protecao();
 ?>
 
 <!DOCTYPE html>
@@ -15,8 +15,8 @@ $controle->protecao();
     <title>Cadastro de Atendimentos</title>
 </head>
 
-<body class="relativo h100">
-    <form class="formulario absoluto translacao35-40 mr2" method="post">
+<body>
+    <form class="formulario " method="post">
         <h1 class="formulario__titulo">Atendimentos</h1>
         <fieldset class="formulario__identificacao">
             <legend class="centralizado formulario__subtitulo">Identificação</legend>
@@ -41,36 +41,36 @@ $controle->protecao();
             </div>
             <div class="opcoesAtendimentos">
                 <div class="opcaoFormulario">
-                    <input value="" type="radio" name="pessoasAtendimento" id="empregador" required>
-                    <label for="empregador" class="formulario__legenda">Empregador</label>
+                    <input value="" type="radio" name="pessoasAtendimento" class="formulario__opcao" id="empregador" required>
+                    <label for="empregador" class="formulario__etiqueta">Empregador</label>
                 </div>
                 <div class="opcaoFormulario">
-                    <input value="" type="radio" name="pessoasAtendimento" id="trabalhador" required>
-                    <label for="trabalhador" class="formulario__legenda">Trabalhador</label>
+                    <input value="" type="radio" name="pessoasAtendimento" id="trabalhador" class="formulario__opcao" required>
+                    <label for="trabalhador" class="formulario__etiqueta">Trabalhador</label>
                 </div>
                 <div class="opcaoFormulario">
-                    <input value="" type="radio" name="pessoasAtendimento" id="ads" required>
-                    <label for="ads" class="formulario__legenda">ADS</label>
+                    <input value="" type="radio" name="pessoasAtendimento" id="ads" required class="formulario__opcao">
+                    <label for="ads" class="formulario__etiqueta">ADS</label>
                 </div>
                 <div class="opcaoFormulario">
-                    <input value="" type="radio" name="pessoasAtendimento" id="setores" required>
-                    <label for="setores" class="formulario__legenda">Setores da FGTAS</label>
+                    <input value="" type="radio" name="pessoasAtendimento" id="setores" required class="formulario__opcao">
+                    <label for="setores" class="formulario__etiqueta">Setores da FGTAS</label>
                 </div>
                 <div class="opcaoFormulario">
-                    <input value="" type="radio" name="pessoasAtendimento" id="mercadoTrabalho" required>
-                    <label for="mercadoTrabalho" class="formulario__legenda">Interessado em informações sobre o Mercado
+                    <input value="" type="radio" name="pessoasAtendimento" id="mercadoTrabalho" class="formulario__opcao" required>
+                    <label for="mercadoTrabalho" class="formulario__etiqueta">Interessado em informações sobre o Mercado
                         de trabalho</label>
                 </div>
                 <div class="opcaoFormulario">
-                    <input value="" type="radio" name="pessoasAtendimento" class="formulario__legenda" id="outro"
+                    <input value="" type="radio" name="pessoasAtendimento" class="formulario__opcao" id="outro"
                         required>
-                    <label for="outro" class="formulario__legenda">Outro</label>
+                    <label for="outro" class="formulario__etiqueta">Outro</label>
                 </div>
             </div>
-            <div class="centralizado">
-                <input type="submit" value="Próximo" class="formulario__botao">
-            </div>
         </fieldset>
+        <div class="centralizado mv0-5">
+        <input type="submit" value="Próximo" class="formulario__botao__padrao formulario__botao">
+        </div>
 
     </form>
 

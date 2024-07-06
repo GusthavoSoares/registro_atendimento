@@ -12,30 +12,34 @@
 </head>
 <body>
     <form method="post">
-        <fieldset>
-            <legend>Usuário</legend>
-            <div>
-                <label for="nomeUsuario">Nome</label>
-                <input type="text" value='' name="nomeUsuario" required id="nomeUsuario" placeholder="João da Silva"  >
-            </div>
-            <div>
-                <label for="emailUsuario">E-mail</label>
-                <input type="email" value='' name="emailUsuario" required id="emailUsuario"
-                placeholder="exemploEmail@gmail.com" >
-            </div>
-            <div>
-            <fieldset>
-                <legend>Cargo</legend>
-                    <select name="cargoUsuario" required>
+        <fieldset class="formulario__campo">
+            <legend class="formulario__legenda">Usuário</legend>
+            <section>
+                <label class="formulario__etiqueta" for="nomeUsuario">Nome</label>
+                <div>
+                    <input type="text" class="formulario__entrada w50" value='' name="nomeUsuario" required id="nomeUsuario" placeholder="João da Silva"  >
+                </div>
+            </section>
+            <section>
+                <label class="formulario__etiqueta" for="emailUsuario">E-mail</label>
+                <div>
+                    <input class="formulario__entrada w50" type="email" value='' name="emailUsuario" required id="emailUsuario"
+                    placeholder="exemploEmail@gmail.com" >
+                </div>
+            </section>
+            <section>
+            <fieldset class="sem_borda">
+                <legend class="formulario__legenda">Cargo</legend>
+                    <select name="cargoUsuario" required class="formulario__selecao w100">
                         <option value="usuario">Usuário</option>
                         <option value="admin">Administrador</option>
                     </select>
-                </div>
+                </section>
             </fieldset>
-            <fieldset>
-            <legend>Ativo</legend>
+            <fieldset class="formulario__campo">
+            <legend class="formulario__legenda">Ativo</legend>
                 <div>
-                    <select required name="ativo">
+                    <select class="formulario__selecao w100" required name="ativo">
                         <option value="Ativado">Ativado</option>
                         <option value="Desativado">Desativado</option>
                     </select>
@@ -43,8 +47,8 @@
             </fieldset>
         </fieldset>
         <div>
-            <a href="admin.php">Voltar</a>
-            <input type="submit" value="Cadastrar">
+            <a href="admin.php" class="formulario__botao__secundario formulario__botao__padrao">Voltar</a>
+            <input type="submit" class="formulario__botao formulario__botao__padrao" value="Cadastrar">
         </div>
     </form>
 <script src="https://kit.fontawesome.com/df85906e6a.js" crossorigin="anonymous"></script>

@@ -1,7 +1,7 @@
 <?php
-require_once __DIR__ . "/../src/controller/SessaoController.php";
-$controle = new SessaoController();
-$controle->protecao();
+// require_once __DIR__ . "/../src/controller/SessaoController.php";
+// $controle = new SessaoController();
+// $controle->protecao();
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +18,7 @@ $controle->protecao();
 
     <body>
         <section>
-            <h1>Solicitante</h1>
+            <h1 class="formulario__titulo">Solicitante</h1>
             <table>
                 <tr>
                     <th>Id</th>
@@ -40,18 +40,18 @@ $controle->protecao();
                     <td>01/01/2024 14:00:20</td>
                     <td>Ativado</td>
                     <td>
-                        <i class="fa-solid fa-pen"></i>
+                        <i class="fa-solid fa-pen icone"></i>
                         <a href="./editar_solicitante.php">Editar</a>
                     </td>
                     <td>
-                        <i class="fa-solid fa-x"></i>
+                        <i class="fa-solid fa-x icone"></i>
                         <a href="../src/controller/excluir_solicitante.php">Excluir</a>
                     </td>
                 </tr>
             </table>
         </section>
         <section>
-            <h1>Atendimento</h1>
+            <h1 class="formulario__titulo">Atendimento</h1>
             <table>
                 <tr>
                     <th>Id</th>
@@ -67,11 +67,11 @@ $controle->protecao();
                     <td>Carteira de trabalho física e digital</td>
                     <td>01/01/2024 14:00:23 </td>
                     <td>
-                        <i class="fa-solid fa-pen"></i>
+                        <i class="fa-solid fa-pen icone"></i>
                         <a href="./editar_atendimento.php">Editar</a>
                     </td>
                     <td>
-                        <i class="fa-solid fa-x"></i>
+                        <i class="fa-solid fa-x icone"></i>
                         <a href="../src/controller/excluir_atendimento.php">Excluir</a>
                     </td>
                 </tr>

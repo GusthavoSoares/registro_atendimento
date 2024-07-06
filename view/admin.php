@@ -1,7 +1,7 @@
 <?php
-    require_once __DIR__ . "/../src/controller/SessaoController.php";
-    $controle = new SessaoController();
-    $controle->protecao();
+    // require_once __DIR__ . "/../src/controller/SessaoController.php";
+    // $controle = new SessaoController();
+    // $controle->protecao();
 ?>
 
 <!DOCTYPE html>
@@ -32,11 +32,11 @@
                 <td>admin</td>
                 <th>Ativado</th>
                 <td>
-                    <i class="fa-solid fa-pen"></i>
+                    <i class="fa-solid fa-pen icone"></i>
                     <a href="./editar_usuario.php">Editar</a>
                 </td>
                 <td>
-                    <i class="fa-solid fa-x"></i>
+                    <i class="fa-solid fa-x icone"></i>
                     <a href="../src/controller/excluir_usuario.php">Excluir</a>
                 </td>
             </tr>

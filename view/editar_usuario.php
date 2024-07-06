@@ -1,7 +1,7 @@
 <?php
-require_once __DIR__ . "/../src/controller/SessaoController.php";
-$controle = new SessaoController();
-$controle->protecao();
+// require_once __DIR__ . "/../src/controller/SessaoController.php";
+// $controle = new SessaoController();
+// $controle->protecao();
 ?>
 
 
@@ -17,30 +17,34 @@ $controle->protecao();
 
 <body>
     <form method="post">
-        <fieldset>
-            <legend>Usuário</legend>
-            <div>
-                <label for="nomeUsuario">Nome</label>
-                <input type="text" value='' name="nomeUsuario" required id="nomeUsuario" placeholder="Maria Rosana">
-            </div>
-            <div>
-                <label for="emailUsuario">E-mail</label>
-                <input type="email" value='' name="emailUsuario" required id="emailUsuario"
-                placeholder="exemplo@gmail.com">
-            </div>
-            <div>
-                <fieldset>
-                    <legend>Cargo</legend>
-                    <select name="cargoUsuario" required>
+        <fieldset class="formulario__campo">
+            <legend class="formulario__legenda">Usuário</legend>
+            <section>
+                <label class="formulario__legenda" for="nomeUsuario">Nome</label>
+                <div>
+                    <input class="formulario__entrada" type="text" value='' name="nomeUsuario" required id="nomeUsuario" placeholder="Maria Rosana">
+                </div>
+            </section>
+            <section>
+                <label class="formulario__legenda"for="emailUsuario">E-mail</label>
+                <div>
+                    <input type="email" value='' name="emailUsuario" required id="emailUsuario" class="formulario__entrada"
+                    placeholder="exemplo@gmail.com">
+                </div>
+            </section>
+            <section>
+                <fieldset class="sem_borda">
+                    <legend class="formulario__legenda">Cargo</legend>
+                    <select class="formulario__selecao" name="cargoUsuario" required>
                         <option value="usuario">Usuário</option>
                         <option value="admin">Administrador</option>
                     </select>
-            </div>
+            </section>
         </fieldset>
-        <fieldset>
-            <legend>Ativo</legend>
+        <fieldset class="formulario__campo">
+            <legend class="formulario__legenda">Ativo</legend>
             <div>
-                <select name="ativo" required>
+                <select class="formulario__selecao" name="ativo" required>
                     <option value="Ativado">Ativado</option>
                     <option value="Desativado">Desativado</option>
                 </select>
@@ -48,8 +52,8 @@ $controle->protecao();
         </fieldset>
         </fieldset>
         <div>
-            <a href="admin.php">Voltar</a>
-            <input type="submit" value="Editar">
+            <a href="admin.php" class="formulario__botao__secundario formulario__botao__padrao">Voltar</a>
+            <input type="submit" class="formulario__botao formulario__botao__padrao" value="Editar">
         </div>
     </form>
 </body>
