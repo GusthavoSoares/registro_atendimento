@@ -16,27 +16,33 @@
 </head>
 
 <body>
-    <form class="formulario " method="post">
+    <form class="formulario mt12-5" method="post">
         <h1 class="formulario__titulo">Atendimentos</h1>
         <fieldset class="formulario__identificacao">
             <legend class="centralizado formulario__subtitulo">Identificação</legend>
-            <div class="atendimento">
+            <section class="grid100">
                 <label class="formulario__legenda" for="identificacaoAtendente">Nome do Atendente</label>
-                <input type="text" value="" id="identificacaoAtendente" name="identificacaoAtendente"
-                    class="formulario__entrada" required minlength="5" maxlength="100">
-                <label class="formulario__legenda" for="identificacaoAtendente">Tipo de atendimento</label>
-                <select class="formulario__selecao" name="tipoAtendimento" required>
-                    <option value="tipo">Escolha o tipo de atendimento...</option>
-                    <option value="presencial">Presencial</option>
-                    <option value="whats">Whatsapp</option>
-                    <option value="telefone">Ligação telefônica</option>
-                    <option value="email">E-mail</option>
-                    <option value="rede_social">Redes sociais</option>
-                    <option value="teams">Teams</option>
-                    <option value="outro">Outra</option>
-                </select>
-            </div>
-            <div class="centralizado formulario__subtitulo">
+                <div class="mv1">
+                    <input type="text" value="" id="identificacaoAtendente" name="identificacaoAtendente"
+                    class="formulario__entrada w100" required minlength="5" maxlength="100">
+                </div>
+            </section>
+                <section class="grid100">
+                    <label class="formulario__legenda" for="identificacaoAtendente">Tipo de atendimento</label>
+                    <div class="grid100 mv0-5">
+                     <select class="formulario__selecao" name="tipoAtendimento" required>
+                        <option value="tipo">Escolha o tipo de atendimento...</option>
+                        <option value="presencial">Presencial</option>
+                        <option value="whats">Whatsapp</option>
+                        <option value="telefone">Ligação telefônica</option>
+                        <option value="email">E-mail</option>
+                        <option value="rede_social">Redes sociais</option>
+                        <option value="teams">Teams</option>
+                        <option value="outro">Outra</option>
+                    </select>
+                </div>                   
+                </section>
+                <div class="centralizado formulario__subtitulo">
                 <label for="pessoaAtendida">Quem estou atendendo </label>
             </div>
             <div class="opcoesAtendimentos">
@@ -68,9 +74,8 @@
                 </div>
             </div>
         </fieldset>
-        <div class="centralizado mv0-5">
-        <input type="submit" value="Próximo" class="formulario__botao__padrao formulario__botao">
-        </div>
+
+        <input type="submit" value="Próximo" class="formulario__botao__padrao formulario__botao mv0-5" >
 
     </form>
 

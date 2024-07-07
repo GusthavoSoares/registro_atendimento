@@ -1,0 +1,29 @@
+.tabela {
+    background: var(--cor_secundaria);
+    color: var(--cor_destaque);
+    border: 1px solid var(--cor_secundaria);
+    border-radius: 20px;
+    border-spacing: 1px;
+    justify-content: center;
+    align-items: center;
+}
+
+tbody {
+    width: 100%;
+}
+
+.cabecalho {
+    font-weight: bold;
+    color: var(--cor_tercearia);
+    margin: 1% 0;
+}
+
+.tabela__link {
+    text-decoration: none;
+    color: var(--cor_tercearia);
+}
+
+.tabela__link:hover {
+    transition: 1s;
+    color: var(--cor_primaria);
+}

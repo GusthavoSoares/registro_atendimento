@@ -1,3 +1,11 @@
+.formulario {
+    display: grid;
+    place-items: center;
+    border-radius: 20px;
+}
+
+
+
 .formulario__titulo {
     color: var(--cor_destaque);
     font-weight: normal;
@@ -20,7 +28,6 @@
     color: var(--cor_destaque);
     font-weight: bold;
     width: 100%;
-    margin: 1.5% 0;
     border-radius: 20px;
 }
 
@@ -39,6 +46,7 @@
 .formulario__botao__padrao {
     border: 0;
     margin: 0.3%;
+    text-decoration: none;
     padding: 0.5% 1.5%;
     font-size: 0.8rem;
     font-family: var(--fonte_titulo);

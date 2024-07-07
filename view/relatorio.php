@@ -20,19 +20,19 @@
 </head>
 
 <body>
-    <h1 class="formulario__titulo">Gerar relatório</h1>
-    <form method="post">
+    <form method="post" class="formulario centralizado">
+        <h1 class="formulario__titulo mv0-5">Gerar relatório</h1>
 
-        <fieldset class="formulario__campo">
-            <legend class="formulario__legenda">Tipo de exportação</legend>
+        <fieldset class="formulario__campo w90">
+            <legend class="formulario__subtitulo">Tipo de exportação</legend>
             <input class="formulario__opcao"value="" type="radio" id="pdf" name="exp">
             <label class="formulario__etiqueta"for="pdf">PDF</label>
             <input class="formulario__opcao" value="" type="radio" id="csv" name="exp">
             <label class="formulario__etiqueta" for="csv">CSV</label>
         </fieldset>
-        <fieldset class="formulario__campo">
-            <legend class="formulario__legenda">Forma de atendimento</legend>
-            <select name="formaAtendimento" class="formulario__selecao">
+        <fieldset class="formulario__campo w90 mt2">
+            <legend class="formulario__subtitulo">Forma de atendimento</legend>
+            <select name="formaAtendimento" class="formulario__selecao w90">
                 <option value="presencial">Presencial</option>
                 <option value="whatsapp">Whatsapp</option>
                 <option value="telefone">Ligação telefônica</option>
@@ -42,9 +42,9 @@
                 <option value="outro">Outro</option>
             </select>
         </fieldset>
-        <fieldset class="formulario__campo">
-            <legend class="formulario__legenda">Tipo de solicitante</legend>
-            <select name="solicitante" class="formulario__selecao">
+        <fieldset class="formulario__campo w90 mt2">
+            <legend class="formulario__subtitulo">Tipo de solicitante</legend>
+            <select name="solicitante" class="formulario__selecao w90">
                 <option value="empregador">Empregador</option>
                 <option value="trabalhador">Trabalhador</option>
                 <option value="out_agen">Outras agências</option>
@@ -54,9 +54,9 @@
                 <option value="outro">Outro</option>
             </select>
         </fieldset>
-        <fieldset class="formulario__campo">
-            <legend class="formulario__legenda">Tipo de atendimento</legend>
-            <select class="formulario__selecao" name="tipoAtendimento">
+        <fieldset class="formulario__campo w90 mt2">
+            <legend class="formulario__subtitulo">Tipo de atendimento</legend>
+            <select class="formulario__selecao w90" name="tipoAtendimento">
                 <option value="trabalho">Carteira de Trabalho, SD, Vagas</option>
                 <option value="pg_artesanato">Programa Gaúcho do Artesanato</option>
                 <option value="vida_centro">Vida Centro Humanístico</option>
@@ -66,24 +66,24 @@
                 <option value="outro">Outro</option>
             </select>
         </fieldset>
-        <fieldset class="formulario__campo">
-            <legend class="formulario__legenda">Período</legend>
+        <fieldset class="formulario__campo w90 mt2">
+            <legend class="formulario__subtitulo">Período</legend>
 
             <section>
                 <label class="formulario__etiqueta" for="dataInicial">Data inicial</label>
                 <div class="mv0-5">
-                    <input class="formulario__entrada" value="" type="datetime-local" name="dataInicial" id="dataInicial">
+                    <input class="formulario__entrada w90" value="" type="datetime-local" name="dataInicial" id="dataInicial">
                 </div>
             </section>
 
             <section>
                 <label for="dataFim" class="formulario__etiqueta">Data final</label>
                 <div class="mv0-5">
-                    <input class="formulario__entrada" value="" type="datetime-local" name="dataFim" id="dataFim">
+                    <input class="formulario__entrada w90" value="" type="datetime-local" name="dataFim" id="dataFim">
                 </div>
             </section>
         </fieldset>
-        <div>
+        <div class="grid50-50 w50 centralizado mv0-5 gp5">
              <a href="./index.php" class="formulario__botao__secundario formulario__botao__padrao">Voltar</a>
             <input class="formulario__botao formulario__botao__padrao" type="submit" value="Exportar">
         </div>

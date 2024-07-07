@@ -13,18 +13,18 @@
     <title>Editar Atendimento</title>
 </head>
 <body>
-<form method="post">
-        <fieldset class="formulario__campo">
-            <legend class="formulario__legenda">Atendimento</legend>
-            <fieldset class="sem_borda">
+<form method="post" class="formulario mt12-5 centralizado">
+        <fieldset class="formulario__campo w80">
+            <legend class="formulario__subtitulo">Atendimento</legend>
+            <fieldset class="sem_borda w100 centralizado">
                 <legend class="formulario__legenda">Id do Solicitante</legend>
-                <select class="formulario__selecao" value="idSolicitante" required>
+                <select class="formulario__selecao w90" value="idSolicitante"  required>
                 <option></option>
                 </select>
             </fieldset>
-            <fieldset class="sem_borda">
+            <fieldset class="sem_borda w100 centralizado">
                 <legend class="formulario__legenda">Tipo de Atendimento</legend>
-                <select class="formulario__selecao" name="tipoAtendimento" required>
+                <select class="formulario__selecao w90" name="tipoAtendimento" required>
                     <option value="carteiraTrabalho">Carteira de Trabalho, SD, Vagas</option>
                     <option value="programaGauchoArtesanato">Programa Gaúcho de Artesanato</option>
                     <option value="centroHumanistico">Vida Centro Humanístico</option>
@@ -35,15 +35,15 @@
                 </select>
             </fieldset>
             <div>
-            <fieldset class="sem_borda">
+            <fieldset class="sem_borda w100 centralizado">
                 <legend class="formulario__legenda">Informação</legend>
-                    <select class="formulario__selecao" name="informacao" required>
+                    <select class="formulario__selecao w90" name="informacao" required>
                         <option></option>
                     </select>
                 </div>
             </fieldset>
         </fieldset>
-        <div>
+        <div class="grid50-50 w50 centralizado mv0-5 gp5">
             <a href="usuario.php" class="formulario__botao__secundario formulario__botao__padrao">Voltar</a>
             <input type="submit" value="Editar" class="formulario__botao formulario__botao__padrao ">
         </div>

@@ -15,13 +15,13 @@
 </head>
 
 <body>
-    <form method="post">
-        <fieldset class="formulario__campo">
-            <legend class="formulario__legenda">Informações sobre o mercado de trabalho (SIP)</legend>
+    <form method="post" class="formulario centralizado">
+        <fieldset class="formulario__campo w80">
+            <legend class="formulario__subtitulo">Informações sobre o mercado de trabalho (SIP)</legend>
             <section >
                 <label for="nomeInfoMercado" class="formulario__etiqueta">Nome</label>
                 <div class="mv0-5">
-                    <input value="" type="text" required minlength="3" id="nomeInfoMercado" name="nomeInfoMercado" class="formulario__entrada">
+                    <input value="" type="text" required minlength="3" id="nomeInfoMercado" name="nomeInfoMercado" class="formulario__entrada w90">
                 </div>
             </section>
             <fieldset class="sem_borda">
@@ -36,7 +36,7 @@
                 </div>
                 <div class="mv0-5">
                     <input type="text" required minlength="3" id="cpf" name="identificadorUnico"
-                        placeholder="Informe seu CPF ou CNPJ" pattern="^[0-9]{11,14}$" maxlength="14" minlength="11" value="" class="formulario__entrada">
+                        placeholder="Informe seu CPF ou CNPJ" pattern="^[0-9]{11,14}$" maxlength="14" minlength="11" value="" class="formulario__entrada w50">
                 </div>
             </fieldset>
 
@@ -44,13 +44,13 @@
 
                 <label  class="formulario__etiqueta" for="telefoneContatoMercado">Telefone</label>
                 <div class="mv0-5">
-                    <input value="" type="tel" minlength="3" id="telefoneContatoMercado" name="telefoneContatoMercado" class="formulario__entrada">
+                    <input value="" type="tel" minlength="3" id="telefoneContatoMercado" name="telefoneContatoMercado" class="formulario__entrada w90">
                 </div>
             </section>
             <section>
                 <label class="formulario__etiqueta" for="emailContatoMercado">E-mail</label>
                 <div class="mv0-5">
-                    <input value="" type="tel" minlength="3" id="emailContatoMercado" name="emailContatoMercado" class="formulario__entrada">
+                    <input value="" type="tel" minlength="3" id="emailContatoMercado" name="emailContatoMercado" class="formulario__entrada w90">
                 </div>
             </section>
             <fieldset class="sem_borda mv0-5">
@@ -84,12 +84,12 @@
             <div>
                 <label  class="formulario__etiqueta" for="descAtividade">Descrição da atividade</label>
                 <div>
-                    <textarea name="descAtividade" id="descAtividade" class="formulario__caixa__texto"></textarea>
+                    <textarea name="descAtividade" id="descAtividade" class="formulario__caixa__texto w90"></textarea>
                 </div>
 
             </div>
         </fieldset>
-        <div>
+        <div class="grid50-50 gp5 mv0-5 w50">
             <a href="./index.php" class="formulario__botao__secundario formulario__botao__padrao">Voltar</a>
             <input type="submit" class="formulario__botao formulario__botao__padrao" value="Enviar" name="envio">
         </div>

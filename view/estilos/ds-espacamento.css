@@ -26,6 +26,22 @@
     margin-top: 2%;
 }
 
+.mt5 {
+    margin-top: 5%;
+}
+
+.mt10 {
+    margin-top: 10%;
+}
+
+.mt12-5 {
+    margin-top: 12.5%;
+}
+
+.mt15 {
+    margin-top: 15%;
+}
+
 .mt1 {
     margin-top: 1%;
 }
@@ -52,4 +68,12 @@
 
 .sem_borda {
     border: 0;
+}
+
+.gp5 {
+    gap: 5%;
+}
+
+.mc {
+    margin: 0 auto;
 }

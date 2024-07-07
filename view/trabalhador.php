@@ -15,30 +15,30 @@
 </head>
 
 <body>
-    <form method="post">
-        <fieldset class="formulario__campo">
-            <legend class="formulario__legenda">Identificação do trabalhador</legend>
+    <form method="post" class="formulario centralizado mt12-5">
+        <fieldset class="formulario__campo w50">
+            <legend class="formulario__subtitulo">Identificação do trabalhador</legend>
             <section>
                 <label class="formulario__etiqueta" for="nomeTrabalhador">Nome</label>
                 <div class="mv0-5">
-                    <input value="" type="text" required minlength="3" id="nomeTrabalhador" name="nomeTrabalhador" class="formulario__entrada">
+                    <input value="" type="text" required minlength="3" id="nomeTrabalhador" name="nomeTrabalhador" class="formulario__entrada w90">
                 </div>
             </section>
             <section>
                 <label for="cpf" class="formulario__etiqueta">CPF</label>
                 <div class="mv0-5">
-                    <input value="" type="text" required maxlength="11" minlength="11" id="cpf" name="cpfTrabalhador" class="formulario__entrada">
+                    <input value="" type="text" required maxlength="11" minlength="11" id="cpf" name="cpfTrabalhador" class="formulario__entrada w90">
                 </div>
             </section>
             <section>
                 <label class="formulario__etiqueta" for="telefoneContato">Telefone de contato</label>
                 <div class="mv0-5">
                     <input value="" type="text" required minlength="3" id="telefoneContato"
-                    name="telefoneContatoTrabalhador" class="formulario__entrada">
+                    name="telefoneContatoTrabalhador" class="formulario__entrada w90">
                 </div>
             </section>
         </fieldset>
-        <div>
+        <div class="grid50-50 gp5 centralizado w33 mv0-5"> 
             <a href="./index.php" class="formulario__botao__secundario formulario__botao__padrao">Voltar</a>
             <input type="submit" class="formulario__botao formulario__botao__padrao" value="Próximo">
         </div>

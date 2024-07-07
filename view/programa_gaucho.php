@@ -15,9 +15,9 @@
 </head>
 
 <body>
-    <form method="post">
+    <form method="post" class="formulario mt12-5">
         <fieldset class="formulario__campo w50">
-            <legend class="formulario__legenda">Informações sobre o programa gaúcho do artesato</legend>
+            <legend class="formulario__subtitulo centralizado">Informações sobre o programa gaúcho do artesato</legend>
             <div>
                 <input value="" type="radio" name="artesanato" required id="carteiraArtesao" class="formulario__opcao">
                 <label class="formulario__etiqueta" for="carteiraArtesao">Carteira do artesão PGA e PBA</label>
@@ -39,7 +39,7 @@
                 <label class="formulario__etiqueta" for="outrosServicos">Outros serviços</label>
             </div>
         </fieldset>
-        <div>
+        <div class="grid50-50 gp5 w33 mv0-5 centralizado">
             <a class="formulario__botao__secundario formulario__botao__padrao"href="./tipo_atendimento.php">Voltar</a>
             <input type="submit" class="formulario__botao formulario__botao__padrao" value="Enviar" name="envio">
         </div>

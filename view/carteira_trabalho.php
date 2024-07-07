@@ -16,9 +16,9 @@
 </head>
 
 <body>
-    <form method="post">
-        <fieldset class="formulario__campo">
-            <legend class="formulario__legenda">Informações sobre carteira de trabalho, seguro-desemprego, vagas</legend>
+    <form method="post" class="formulario mt15">
+        <fieldset class="formulario__campo w70">
+            <legend class="formulario__subtitulo">Informações sobre carteira de trabalho, seguro-desemprego, vagas</legend>
             <div>
                 <input class="formulario__opcao" type="radio" name="trabalho" value="" required id="carteiraTrab">
                 <label class="formulario__etiqueta" for="carteiraTrab">Carteira de trabalho física e digital</label>
@@ -35,12 +35,12 @@
                 <input class="formulario__opcao" type="radio" name="trabalho" value="" required id="outrosServicos">
                 <label class="formulario__etiqueta" for="outrosServicos">Outros serviços</label>
             </div>
-        </fieldset>
-        <div>
+</fieldset>
+        <section class="grid50-50 gp5 mv0-5 w25 centralizado">
             <a href="./tipo_atendimento.php" class="formulario__botao__secundario formulario__botao__padrao" >Voltar</a>
             <input type="submit" value="Enviar" class="formulario__botao formulario__botao__padrao">
-        </div>
-    </form>
+        </section>
+        </form>
     <script src="https://kit.fontawesome.com/df85906e6a.js" crossorigin="anonymous"></script>
 </body>
 

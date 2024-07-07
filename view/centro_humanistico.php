@@ -15,9 +15,9 @@
 </head>
 
 <body>
-    <form method="post">
-        <fieldset class="formulario__campo">
-            <legend class="formulario__legenda">Orientações sobre a vida centro humanístico</legend>
+    <form method="post" class="formulario">
+        <fieldset class="formulario__campo w50 mt12-5">
+            <legend class="formulario__subtitulo centralizado">Orientações sobre a vida centro humanístico</legend>
             <div>
                 <input type="radio" class="formulario__opcao" name="centroHum" value="" required id="atvLudica">
                 <label class="formulario__legenda" for="atvLudica">Atividades lúdicas e pedagógicas</label>
@@ -43,7 +43,7 @@
                 <label for="outrosServicos" class="formulario__legenda">Outros serviços</label>
             </div>
         </fieldset>
-        <div>
+        <div class="grid50-50 gp5 mv0-5 w33 centralizado">
             <a href="./tipo_atendimento.php" class="formulario__botao__secundario formulario__botao__padrao">Voltar</a>
             <input type="submit" value="Enviar" class="formulario__botao formulario__botao__padrao">
         </div>
