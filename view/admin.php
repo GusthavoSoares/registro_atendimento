@@ -2,6 +2,9 @@
     require_once __DIR__ . "/../src/controller/SessaoController.php";
     $controle = new SessaoController();
     $controle->protecao();
+    if($_SESSION['nome'] != 'admin'){
+        header("location: home.php");
+    }
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +17,7 @@
 </head>
 
 <body>
-    <h1>Bem-vindo..... x</h1>
+    <h1>Bem-vindo <?= $_SESSION['nome'] ?></h1>
     <section class="secao__usuarios">
         <table>
             <tr>

@@ -8,7 +8,7 @@ class Usuario
     private string $ativo;
     private $senha;
 
-    public function __construct($nome, $email, $cargo, $ativo = 'S', $senha = null)
+    public function __construct($nome, $email, $cargo, $ativo = 'Ativado', $senha = null)
     {
         $this->nome = $nome;
         $this->email = $email;

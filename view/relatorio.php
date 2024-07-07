@@ -1,12 +1,7 @@
 <?php
-
-    if($_REQUEST['exp'] === 'pdf'){
-        header("Location: /../src/controller/relatorios/gerapdf.php");
-    }elseif($_REQUEST['exp'] === 'csv'){
-        header("Location: /../src/controller/relatorios/geracsv.php");
-    }else{
-        echo 'ERRO';
-    }
+    require_once __DIR__ . "/../src/controller/SessaoController.php";
+    $controle = new SessaoController();
+    $controle->protecao();
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +16,7 @@
 
 <body>
     <h1>Gerar relatório</h1>
-    <form method="post">
+    <form method="post" action="../src/controller/relatorios/controlador.php">
 
         <fieldset>
             <legend>Tipo de exportação</legend>
@@ -31,8 +26,9 @@
             <label for="csv">CSV</label>
         </fieldset>
         <fieldset>
-            <legend>Tipo de atendimento</legend>
-            <select>
+            <legend>Forma de atendimento</legend>
+            <select name="forma">
+                <option value="default">Sem filtro</option>
                 <option value="presencial">Presencial</option>
                 <option value="whatsapp">Whatsapp</option>
                 <option value="telefone">Ligação telefônica</option>
@@ -44,7 +40,8 @@
         </fieldset>
         <fieldset>
             <legend>Público</legend>
-            <select>
+            <select name="publico">
+                <option value="default">Sem Filtro</option>
                 <option value="empregador">Empregador</option>
                 <option value="trabalhador">Trabalhador</option>
                 <option value="out_agen">Outras agências</option>
@@ -56,7 +53,8 @@
         </fieldset>
         <fieldset>
             <legend>Tipo de atendimento</legend>
-            <select>
+            <select name="tipoAtt">
+                <option value="default">Sem Filtro</option>
                 <option value="trabalho">Carteira de Trabalho, SD, Vagas</option>
                 <option value="pg_artesanato">Programa Gaúcho do Artesanato</option>
                 <option value="vida_centro">Vida Centro Humanístico</option>

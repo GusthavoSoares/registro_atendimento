@@ -4,7 +4,6 @@
     $controle->protecao();
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 

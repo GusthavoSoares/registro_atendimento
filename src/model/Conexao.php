@@ -15,7 +15,7 @@ abstract class Conexao
 
     protected function conexao()
     {
-        $this->pdo = new PDO('mysql:host=' . $this->host . ';dbname='.$this->dbname, $this->usuario, $this->senha);
+        $this->pdo = new PDO("mysql:host=$this->host;dbname=$this->dbname", $this->usuario, $this->senha);
 
         return $this->pdo;
     }
