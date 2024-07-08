@@ -25,7 +25,7 @@ body {
 }
 
 .icone {
-    color: var(--cor_principal);
+    color: var(--cor_destaque);
     font-size: calc(var(--tamanho_fonte_texto) * 0.7);
     cursor: pointer;
 
@@ -34,9 +34,5 @@ body {
 
 .icone:hover {
     transition: 1s;
-    color: var(--cor_destaque);
+    color: var(--cor_tercearia);
 }
-
-
-
-

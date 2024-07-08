@@ -12,8 +12,9 @@ class RelatorioAtendimento
     private string $descricao;
     private string $ativo;
     private string $informacao;
+    private $data_registro;
 
-    public function __construct($tipo_solicitante, $identificador_unico, $forma_atendimento, $nome, $email, $telefone, $tipo_informacao, $descricao, $ativo, $informacao)
+    public function __construct($tipo_solicitante, $identificador_unico, $forma_atendimento, $nome, $email, $telefone, $tipo_informacao, $descricao, $ativo, $informacao, $data_registro)
     {
         $this->tipo_solicitante = $tipo_solicitante;
         $this->identificador_unico = $identificador_unico;
@@ -25,6 +26,7 @@ class RelatorioAtendimento
         $this->descricao = $descricao;
         $this->ativo = $ativo;
         $this->informacao = $informacao;
+        $this->data_registro = $data_registro;
     }
 
     public function getTipoSolicitante() {
@@ -56,5 +58,9 @@ class RelatorioAtendimento
     }
     public function getInformacao() {
         return $this->informacao;
+    }
+    public function getData()
+    {
+        return $this->data_registro;
     }
 }

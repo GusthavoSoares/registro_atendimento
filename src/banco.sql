@@ -24,7 +24,7 @@ CREATE TABLE solicitante(
     tipo_informacao VARCHAR(255) NOT NULL DEFAULT '',
     descricao VARCHAR(255) NOT NULL DEFAULT '',
     ativo ENUM('Ativado', 'Desativado') NOT NULL DEFAULT 'Ativado',
-    data_registro DATETIME NOT NULL,
+    data_registro_soli DATETIME NOT NULL,
 	FOREIGN KEY (id_usuario) REFERENCES usuario(id)
 );
 

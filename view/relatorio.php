@@ -15,20 +15,20 @@
 </head>
 
 <body>
-    <h1>Gerar relatório</h1>
-    <form method="post" action="../src/controller/relatorios/controlador.php">
+    <form method="post" action="../src/controller/relatorios/controlador.php" class="formulario centralizado">
+        <h1 class="formulario__titulo mv0-5">Gerar relatório</h1>
 
-        <fieldset>
-            <legend>Tipo de exportação</legend>
-            <input  value="pdf" type="radio" id="pdf" name="exp">
-            <label for="pdf">PDF</label>
-            <input value="csv" type="radio" id="csv" name="exp">
-            <label for="csv">CSV</label>
+        <fieldset class="formulario__campo w90">
+            <legend class="formulario__subtitulo">Tipo de exportação</legend>
+            <input class="formulario__opcao"value="pdf" type="radio" id="pdf" name="exp">
+            <label class="formulario__etiqueta"for="pdf">PDF</label>
+            <input class="formulario__opcao" value="csv" type="radio" id="csv" name="exp">
+            <label class="formulario__etiqueta" for="csv">CSV</label>
         </fieldset>
-        <fieldset>
-            <legend>Forma de atendimento</legend>
-            <select name="forma">
-                <option value="default">Sem filtro</option>
+        <fieldset class="formulario__campo w90 mt2">
+            <legend class="formulario__subtitulo">Forma de atendimento</legend>
+            <select name="formaAtendimento" class="formulario__selecao w90">
+                <option value="default">Sem Filtro</option>
                 <option value="presencial">Presencial</option>
                 <option value="whatsapp">Whatsapp</option>
                 <option value="telefone">Ligação telefônica</option>
@@ -37,11 +37,7 @@
                 <option value="teams">Teams</option>
                 <option value="outro">Outro</option>
             </select>
-        </fieldset>
-        <fieldset>
-            <legend>Público</legend>
-            <select name="publico">
-                <option value="default">Sem Filtro</option>
+        </fieldset>home.phplt">Sem Filtro</option>
                 <option value="empregador">Empregador</option>
                 <option value="trabalhador">Trabalhador</option>
                 <option value="out_agen">Outras agências</option>
@@ -51,9 +47,9 @@
                 <option value="outro">Outro</option>
             </select>
         </fieldset>
-        <fieldset>
-            <legend>Tipo de atendimento</legend>
-            <select name="tipoAtt">
+        <fieldset class="formulario__campo w90 mt2">
+            <legend class="formulario__subtitulo">Tipo de atendimento</legend>
+            <select class="formulario__selecao w90" name="tipoAtendimento">
                 <option value="default">Sem Filtro</option>
                 <option value="trabalho">Carteira de Trabalho, SD, Vagas</option>
                 <option value="pg_artesanato">Programa Gaúcho do Artesanato</option>
@@ -64,21 +60,26 @@
                 <option value="outro">Outro</option>
             </select>
         </fieldset>
-        <fieldset>
-            <legend>Período</legend>
+        <fieldset class="formulario__campo w90 mt2">
+            <legend class="formulario__subtitulo">Período</legend>
 
-            <div>
-                <label for="data_ini">Data inicial</label>
-                <input value="" type="date" id="data_ini">
-            </div>
+            <section>
+                <label class="formulario__etiqueta" for="dataInicial">Data inicial</label>
+                <div class="mv0-5">
+                    <input class="formulario__entrada w90" value="dataInicial" type="datetime-local" name="dataInicial" id="dataInicial">
+                </div>
+            </section>
 
-            <div>
-                <label for="data_fim">Data final</label>
-                <input value="" type="date" id="data_fim">
-            </div>
+            <section>
+                <label for="dataFim" class="formulario__etiqueta">Data final</label>
+                <div class="mv0-5">
+                    <input class="formulario__entrada w90" value="dataFim" type="datetime-local" name="dataFim" id="dataFim">
+                </div>
+            </section>
         </fieldset>
-        <div>
-            <input type="submit" value="Exportar">
+        <div class="grid50-50 w50 centralizado mv0-5 gp5">
+             <a href="./index.php" class="formulario__botao__secundario formulario__botao__padrao">Voltar</a>
+            <input class="formulario__botao formulario__botao__padrao" type="submit" value="Exportar">
         </div>
     </form>
     <script src="https://kit.fontawesome.com/df85906e6a.js" crossorigin="anonymous"></script>

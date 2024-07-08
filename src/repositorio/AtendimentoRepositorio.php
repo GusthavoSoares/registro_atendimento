@@ -13,11 +13,13 @@ class AtendimentoRepositorio extends Conexao
         $dados['tipo_informacao'],
         $dados['descricao'],
         $dados['ativo'],
-        $dados['informacao']);
+        $dados['informacao'],
+        $dados['data_registro']
+        );
     }
 
     // Recebe os valores de POST e usa como parâmetro para aplicar os filtros de busca
-    public function buscarTodos($forma, $publico, $tipoAtt)
+    public function buscarTodos($forma, $publico, $tipoAtt, $dataInicio, $dataFim)
     {
         $filtros = [];
         $params = [];
@@ -37,7 +39,16 @@ class AtendimentoRepositorio extends Conexao
             $params[':tipoAtt'] = $tipoAtt;
         }
 
-        $sql = "SELECT solici.tipo_solicitante, solici.identificador_unico, solici.forma_atendimento, solici.nome, solici.email, solici.telefone, solici.tipo_informacao, solici.descricao, solici.ativo, att.informacao FROM usuario as user INNER JOIN solicitante as solici ON solici.id_usuario = user.id INNER JOIN atendimento as att ON att.id_solicitante = solici.id";
+        if (isset($dataInicio) && $dataInicio != '') {
+            $filtros[] = 'att.data_registro >= :dataInicio';
+            $params[':dataInicio'] = $dataInicio;
+        }
+        if (isset($dataFim) && $dataFim != '') {
+            $filtros[] = 'att.data_registro <= :dataFim';
+            $params[':dataFim'] = $dataFim;
+        }
+
+        $sql = "SELECT solici.tipo_solicitante, solici.identificador_unico, solici.forma_atendimento, solici.nome, solici.email, solici.telefone, solici.tipo_informacao, solici.descricao, solici.ativo, att.informacao, att.data_registro FROM usuario as user INNER JOIN solicitante as solici ON solici.id_usuario = user.id INNER JOIN atendimento as att ON att.id_solicitante = solici.id";
         if($filtros){
             $sql .= ' WHERE ' . implode(' AND ', $filtros);
         }

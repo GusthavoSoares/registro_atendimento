@@ -4,9 +4,8 @@
     $controle->protecao();
 ?>
 
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,18 +13,18 @@
     <title>Editar Atendimento</title>
 </head>
 <body>
-<form method="post">
-        <fieldset>
-            <legend>Atendimento</legend>
-            <fieldset>
-                <legend>Id do Solicitante</legend>
-                <select value="idSolicitante" required>
+<form method="post" class="formulario mt12-5 centralizado">
+        <fieldset class="formulario__campo w80">
+            <legend class="formulario__subtitulo">Atendimento</legend>
+            <fieldset class="sem_borda w100 centralizado">
+                <legend class="formulario__legenda">Id do Solicitante</legend>
+                <select class="formulario__selecao w90" value="idSolicitante"  required>
                 <option></option>
                 </select>
             </fieldset>
-            <fieldset>
-                <legend>Tipo de Atendimento</legend>
-                <select value="tipoAtendimento" required>
+            <fieldset class="sem_borda w100 centralizado">
+                <legend class="formulario__legenda">Tipo de Atendimento</legend>
+                <select class="formulario__selecao w90" name="tipoAtendimento" required>
                     <option value="carteiraTrabalho">Carteira de Trabalho, SD, Vagas</option>
                     <option value="programaGauchoArtesanato">Programa Gaúcho de Artesanato</option>
                     <option value="centroHumanistico">Vida Centro Humanístico</option>
@@ -36,17 +35,17 @@
                 </select>
             </fieldset>
             <div>
-            <fieldset>
-                <legend>Informação</legend>
-                    <select name="informacao" required>
+            <fieldset class="sem_borda w100 centralizado">
+                <legend class="formulario__legenda">Informação</legend>
+                    <select class="formulario__selecao w90" name="informacao" required>
                         <option></option>
                     </select>
                 </div>
             </fieldset>
         </fieldset>
-        <div>
-            <a href="usuario.php">Voltar</a>
-            <input type="submit" value="Editar">
+        <div class="grid50-50 w50 centralizado mv0-5 gp5">
+            <a href="usuario.php" class="formulario__botao__secundario formulario__botao__padrao">Voltar</a>
+            <input type="submit" value="Editar" class="formulario__botao formulario__botao__padrao ">
         </div>
     </form>
 </body>

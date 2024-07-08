@@ -15,33 +15,33 @@
 </head>
 
 <body>
-    <form method="post">
-        <fieldset>
-            <legend>Informações sobre o programa gaúcho do artesato</legend>
+    <form method="post" class="formulario mt12-5">
+        <fieldset class="formulario__campo w50">
+            <legend class="formulario__subtitulo centralizado">Informações sobre o programa gaúcho do artesato</legend>
             <div>
-                <label for="carteiraArtesao">Carteira do artesão PGA e PBA</label>
-                <input value="" type="radio" name="artesanato" required id="carteiraArtesao">
+                <input value="" type="radio" name="artesanato" required id="carteiraArtesao" class="formulario__opcao">
+                <label class="formulario__etiqueta" for="carteiraArtesao">Carteira do artesão PGA e PBA</label>
             </div>
             <div>
-                <label for="feiras">Participação em feiras de artesanato</label>
-                <input value="" type="radio" name="artesanato" required id="feiras">
+                <input value="" type="radio" name="artesanato" required id="feiras" class="formulario__opcao">
+                <label class="formulario__etiqueta" for="feiras">Participação em feiras de artesanato</label>
             </div>
             <div>
-                <label for="casaArtesao">Participação em casas do artesão</label>
-                <input value="" type="radio" name="artesanato" required id="casaArtesao">
+                <input value="" type="radio" name="artesanato" required id="casaArtesao" class="formulario__opcao">
+                <label class="formulario__etiqueta" for="casaArtesao">Participação em casas do artesão</label>
             </div>
             <div>
-                <label for="portal">Inscrição e acesso ao portal do artesanato gaúcho</label>
-                <input value="" type="radio"  name="artesanato" required id="portal">
+                <input value="" type="radio" name="artesanato" required id="portal" class="formulario__opcao">
+                <label class="formulario__etiqueta" for="portal">Inscrição e acesso ao portal do artesanato gaúcho</label>
             </div>
             <div>
-                <label for="outrosServicos">Outros serviços</label>
-                <input value="" type="radio" name="artesanato" required id="outrosServicos">
+                <input value="" type="radio" name="artesanato" required id="outrosServicos" class="formulario__opcao">
+                <label class="formulario__etiqueta" for="outrosServicos">Outros serviços</label>
             </div>
         </fieldset>
-        <div>
-            <a href="./tipo_atendimento.php">Voltar</a>
-            <input type="submit" value="Enviar" name="envio">
+        <div class="grid50-50 gp5 w33 mv0-5 centralizado">
+            <a class="formulario__botao__secundario formulario__botao__padrao"href="./tipo_atendimento.php">Voltar</a>
+            <input type="submit" class="formulario__botao formulario__botao__padrao" value="Enviar" name="envio">
         </div>
     </form>
     <script src="https://kit.fontawesome.com/df85906e6a.js" crossorigin="anonymous"></script>

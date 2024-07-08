@@ -15,77 +15,83 @@
 </head>
 
 <body>
-    <form method="post">
-        <fieldset>
-            <legend>Informações sobre o mercado de trabalho (SIP)</legend>
-
-            <div>
-                <label for="nomeInfoMercado">Nome</label>
-                <input value="" type="text" required minlength="3" id="nomeInfoMercado" name="nomeInfoMercado">
-            </div>
-            <fieldset>
-                <legend>Tipo de cadastro</legend>
-                <div>
-                    <label for="pessoaFisica">Pessoa Física</label>
-                    <input value="" type="radio" name="tipoPessoa" id="pessoaFisica">
+    <form method="post" class="formulario centralizado">
+        <fieldset class="formulario__campo w80">
+            <legend class="formulario__subtitulo">Informações sobre o mercado de trabalho (SIP)</legend>
+            <section >
+                <label for="nomeInfoMercado" class="formulario__etiqueta">Nome</label>
+                <div class="mv0-5">
+                    <input value="" type="text" required minlength="3" id="nomeInfoMercado" name="nomeInfoMercado" class="formulario__entrada w90">
                 </div>
+            </section>
+            <fieldset class="sem_borda">
+                <legend class="formulario__legenda">Tipo de cadastro</legend>
                 <div>
-                    <label for="pessoaJuridica">Pessoa Jurídica</label>
-                    <input value="" type="radio" name="tipoPessoa" id="pessoaJuridica">
+                    <input value="" type="radio" name="tipoPessoa" id="pessoaFisica" class="formulario__opcao">
+                    <label for="pessoaFisica" class="formulario__etiqueta">Pessoa Física</label>
                 </div>
-                <div>
+                <div >
+                    <input value="" type="radio" name="tipoPessoa" id="pessoaJuridica" class="formulario__opcao">
+                    <label  class="formulario__etiqueta" for="pessoaJuridica">Pessoa Jurídica</label>
+                </div>
+                <div class="mv0-5">
                     <input type="text" required minlength="3" id="cpf" name="identificadorUnico"
-                        placeholder="Informe seu CPF ou CNPJ " value="">
+                        placeholder="Informe seu CPF ou CNPJ" pattern="^[0-9]{11,14}$" maxlength="14" minlength="11" value="" class="formulario__entrada w50">
                 </div>
             </fieldset>
 
-            <div>
-                <label for="telefoneContatoMercado">Telefone</label>
-                <input value="" type="tel" minlength="3" id="telefoneContatoMercado" name="telefoneContatoMercado">
-            </div>
-            <div>
-                <label for="emailContatoMercado">E-mail</label>
-                <input value="" type="tel" minlength="3" id="emailContatoMercado" name="emailContatoMercado">
-            </div>
-            <fieldset>
-                <legend>Tipo de informações</legend>
+            <section>
+
+                <label  class="formulario__etiqueta" for="telefoneContatoMercado">Telefone</label>
+                <div class="mv0-5">
+                    <input value="" type="tel" minlength="3" id="telefoneContatoMercado" name="telefoneContatoMercado" class="formulario__entrada w90">
+                </div>
+            </section>
+            <section>
+                <label class="formulario__etiqueta" for="emailContatoMercado">E-mail</label>
+                <div class="mv0-5">
+                    <input value="" type="tel" minlength="3" id="emailContatoMercado" name="emailContatoMercado" class="formulario__entrada w90">
+                </div>
+            </section>
+            <fieldset class="sem_borda mv0-5">
+                <legend class="formulario__legenda">Tipo de informações</legend>
                 <div>
-                    <label for="intermediacao">Estatísticas da intermediação de mão de obra no âmbito do Sine/RS</label>
-                    <input value="" type="radio" name="tipoInfoMercado" id="intermediacao">
+                    <input value="" class="formulario__opcao" type="radio" name="tipoInfoMercado" id="intermediacao">
+                    <label class="formulario__etiqueta" for="intermediacao">Estatísticas da intermediação de mão de obra no âmbito do Sine/RS</label>
                 </div>
                 <div>
-                    <label for="seguroDesemprego">Estatísticas do seguro-desemprego no âmbito do Sine/RS</label>
-                    <input value="" type="radio" name="tipoInfoMercado" id="seguroDesemprego">
+                    <input value="" type="radio" name="tipoInfoMercado" id="seguroDesemprego" class="formulario__opcao">
+                    <label for="seguroDesemprego" class="formulario__etiqueta">Estatísticas do seguro-desemprego no âmbito do Sine/RS</label>
                 </div>
                 <div>
-                    <label for="vagasAbertas">Relação de vagas abertas no Sine/RS</label>
-                    <input value="" type="radio" name="tipoInfoMercado" id="vagasAbertas">
+                    <input value="" type="radio" name="tipoInfoMercado" class="formulario__opcao" id="vagasAbertas">
+                    <label class="formulario__etiqueta" for="vagasAbertas">Relação de vagas abertas no Sine/RS</label>
                 </div>
                 <div>
-                    <label for="resultadosCAGED">Resultados do Novo CAGED</label>
-                    <input value="" type="radio" name="tipoInfoMercado" id="resultadosCAGED">
+                    <input value="" type="radio" name="tipoInfoMercado" id="resultadosCAGED" class="formulario__opcao">
+                    <label for="resultadosCAGED" class="formulario__etiqueta">Resultados do Novo CAGED</label>
                 </div>
                 <div>
-                    <label for="pnad">Resultados da PNAD Contínua</label>
-                    <input value="" type="radio" name="tipoInfoMercado" id="pnad">
+                    <input value="" type="radio" name="tipoInfoMercado" class="formulario__opcao" id="pnad">
+                    <label for="pnad" class="formulario__etiqueta">Resultados da PNAD Contínua</label>
                 </div>
                 <div>
-                    <label for="outro">Outro</label>
-                    <input value="" type="radio" name="tipoInfoMercado" id="outro">
+                    <input value="" type="radio" name="tipoInfoMercado" class="formulario__opcao" id="outro">
+                    <label for="outro" class="formulario__etiqueta">Outro</label>
                 </div>
 
-            </fieldset>
+            </fieldset >
             <div>
-                <label for="desc_atividade">Descrição da atividade</label>
+                <label  class="formulario__etiqueta" for="descAtividade">Descrição da atividade</label>
                 <div>
-                    <textarea></textarea>
+                    <textarea name="descAtividade" id="descAtividade" class="formulario__caixa__texto w90"></textarea>
                 </div>
 
             </div>
         </fieldset>
-        <div>
-            <a href="./index.php">Voltar</a>
-            <input type="submit" value="Enviar" name="envio">
+        <div class="grid50-50 gp5 mv0-5 w50">
+            <a href="./index.php" class="formulario__botao__secundario formulario__botao__padrao">Voltar</a>
+            <input type="submit" class="formulario__botao formulario__botao__padrao" value="Enviar" name="envio">
         </div>
     </form>
     <script src="https://kit.fontawesome.com/df85906e6a.js" crossorigin="anonymous"></script>

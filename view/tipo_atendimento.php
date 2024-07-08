@@ -11,41 +11,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./estilos/ds.css">
-    <link rel="stylesheet" href="./estilos/pg-principal.css">
-    <link rel="stylesheet" href="./estilos/pg-login.css">
-    <link rel="stylesheet" href="./estilos/secao.css">
     <title>Tipo de Atendimento</title>
-
 </head>
 
 <body>
-    <form class="container">
-        <h1>Tipo de Atendimento</h1>
+    <form method="post" class="formulario centralizado mt12-5">
+        <div class="formulario__tipo_atendimento w80">
+            <fieldset class="formulario__campo">
+                <legend class="formulario__subtitulo">Tipo de atendimento</legend> 
+                <section class="mv0-5">
+                <select id="tipoAtendimento" name="tipoAtendimento" class="formulario__selecao w90" required>
+                    <option value="" disabled selected>Selecionar sua resposta</option>
+                    <option value="carteira_trabalho">Carteira de Trabalho, SD, Vagas</option>
+                    <option value="programa_artesanato">Programa Gaúcho do Artesanato</option>
+                    <option value="vida_centro_humanistico">Vida Centro Humanístico</option>
+                    <option value="orientacoes_empreendedorismo">Orientações sobre empreendedorismo</option>
+                    <option value="orientacoes_cursos_qualificacao">Orientações sobre cursos de qualificação</option>
+                    <option value="informacoes_mercado_trabalho">Informações sobre mercado de trabalho</option>
+                    <option value="outra">Outra</option>
+                </select>
+             </section>
+            <section class="escondido">
+                <label class="formulario__etiqueta" for="outraResposta">Insira sua resposta</label>
+                <div class="mv0-5">
+                    <input value="" type="text" id="outraResposta" name="outraResposta" class="formulario__entrada w90">
+                </div>
+            </section>
+        </fieldset>
+        <div class="mv0-5">
+            <a href="./index.php" class="formulario__botao__padrao formulario__botao__secundario">Voltar</a>
+            <input type="submit" value="Próximo" class="formulario__botao formulario__botao__padrao">
+        </div>
+    </form>
 
-        <div class="formulario__tipo_atendimento">
-            <label class="formulario__legenda" for="tipo_atendimento">Selecionar Tipo de Atendimento</label>
-            <select id="tipo_atendimento" name="tipo_atendimento" class="formulario__entrada" required onchange="toggleOutra()">
-                <option value="" disabled selected>Selecionar sua resposta</option>
-                <option value="carteira_trabalho">Carteira de Trabalho, SD, Vagas</option>
-                <option value="programa_artesanato">Programa Gaúcho do Artesanato</option>
-                <option value="vida_centro_humanistico">Vida Centro Humanístico</option>
-                <option value="orientacoes_empreendedorismo">Orientações sobre empreendedorismo</option>
-                <option value="orientacoes_cursos_qualificacao">Orientações sobre cursos de qualificação</option>
-                <option value="informacoes_mercado_trabalho">Informações sobre mercado de trabalho</option>
-                <option value="outra">Outra</option>
-            </select>
-        </div>
-        <div id="outra_container" class="formulario__tipo_atendimento hidden">
-            <label class="formulario__legenda" for="outra_resposta">Insira sua resposta</label>
-            <input value="" type="text" id="outra_resposta" name="outra_resposta" class="formulario__entrada">
-        </div>
-        <div class="centralizado">
-            <input value="" type="button" value="Voltar"  class="formulario__botao">
-            <input value="" type="button" id="avancar" value="Avançar" class="formulario__botao">
-        </div>
-</form>
-
-<script src="https://kit.fontawesome.com/df85906e6a.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/df85906e6a.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
