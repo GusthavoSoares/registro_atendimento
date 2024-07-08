@@ -1,12 +1,12 @@
 <?php
-// require_once __DIR__ . "/../src/controller/SessaoController.php";
-// $controle = new SessaoController();
-// $controle->protecao();
+require_once __DIR__ . "/../src/controller/SessaoController.php";
+$controle = new SessaoController();
+$controle->protecao();
 ?>
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">

@@ -17,13 +17,13 @@
             <section class="centralizado">
                 <label class="formulario__etiqueta" for="nomeUsuario">Nome</label>
                 <div>
-                    <input type="text" class="formulario__entrada w90" value='' name="nomeUsuario" required id="nomeUsuario" placeholder="João da Silva"  >
+                    <input type="text" class="formulario__entrada w90" value='' name="nome" required id="nomeUsuario" placeholder="João da Silva"  >
                 </div>
             </section>
             <section class="centralizado mv1">
                 <label class="formulario__etiqueta" for="emailUsuario ">E-mail</label>
                 <div>
-                    <input class="formulario__entrada w90" type="email" value='' name="emailUsuario" required id="emailUsuario"
+                    <input class="formulario__entrada w90" type="email" value='' name="email" required id="emailUsuario"
                     placeholder="exemploEmail@gmail.com" >
                 </div>
             </section>
@@ -39,7 +39,7 @@
             <fieldset class="formulario__campo w80 mt2">
             <legend class="formulario__subtitulo">Ativo</legend>
                 <div class="centralizado mv0-5">
-                    <select class="formulario__selecao w90" required name="ativo">
+                    <select class="formulario__selecao w90" required name="ativoUsuario">
                         <option value="Ativado">Ativado</option>
                         <option value="Desativado">Desativado</option>
                     </select>

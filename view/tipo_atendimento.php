@@ -1,7 +1,7 @@
 <?php
-// require_once __DIR__ . "/../src/controller/SessaoController.php";
-// $controle = new SessaoController();
-// $controle->protecao();
+ require_once __DIR__ . "/../src/controller/SessaoController.php";
+ $controle = new SessaoController();
+ $controle->protecao();
 ?>
 
 <!DOCTYPE html>
@@ -32,9 +32,9 @@
                 </select>
              </section>
             <section class="escondido">
-                <label class="formulario__etiqueta" for="outraResposta">Insira sua resposta</label>
+                <label class="formulario__etiqueta" for="outra_resposta">Insira sua resposta</label>
                 <div class="mv0-5">
-                    <input value="" type="text" id="outraResposta" name="outraResposta" class="formulario__entrada w90">
+                    <input value="" type="text" id="outra_resposta" name="outra_resposta" class="formulario__entrada w90">
                 </div>
             </section>
         </fieldset>

@@ -1,12 +1,7 @@
 <?php
-
-// if ($_REQUEST['exp'] === 'pdf') {
-//     header("Location: /../src/controller/relatorios/gerapdf.php");
-// } elseif ($_REQUEST['exp'] === 'csv') {
-//     header("Location: /../src/controller/relatorios/geracsv.php");
-// } else {
-//     echo 'ERRO';
-// }
+  require_once __DIR__ . "/../src/controller/SessaoController.php";
+  $controle = new SessaoController();
+  $controle->protecao();
 ?>
 
 <!DOCTYPE html>
@@ -33,6 +28,7 @@
         <fieldset class="formulario__campo w90 mt2">
             <legend class="formulario__subtitulo">Forma de atendimento</legend>
             <select name="formaAtendimento" class="formulario__selecao w90">
+                <option value="default">Sem filtro</option>
                 <option value="presencial">Presencial</option>
                 <option value="whatsapp">Whatsapp</option>
                 <option value="telefone">Ligação telefônica</option>
@@ -44,7 +40,8 @@
         </fieldset>
         <fieldset class="formulario__campo w90 mt2">
             <legend class="formulario__subtitulo">Tipo de solicitante</legend>
-            <select name="solicitante" class="formulario__selecao w90">
+            <select name="publico" class="formulario__selecao w90">
+                <option value="default">Sem Filtro</option> 
                 <option value="empregador">Empregador</option>
                 <option value="trabalhador">Trabalhador</option>
                 <option value="out_agen">Outras agências</option>
@@ -56,8 +53,9 @@
         </fieldset>
         <fieldset class="formulario__campo w90 mt2">
             <legend class="formulario__subtitulo">Tipo de atendimento</legend>
-            <select class="formulario__selecao w90" name="tipoAtendimento">
-                <option value="trabalho">Carteira de Trabalho, SD, Vagas</option>
+            <select class="formulario__selecao w90" name="tipoAtt">
+            <option value="default">Sem Filtro</option>    
+            <option value="trabalho">Carteira de Trabalho, SD, Vagas</option>
                 <option value="pg_artesanato">Programa Gaúcho do Artesanato</option>
                 <option value="vida_centro">Vida Centro Humanístico</option>
                 <option value="empreendedorismo">Orientações sobre empreendedorismo</option>
@@ -72,12 +70,12 @@
             <section>
                 <label class="formulario__etiqueta" for="dataInicial">Data inicial</label>
                 <div class="mv0-5">
-                    <input class="formulario__entrada w90" value="" type="datetime-local" name="dataInicial" id="dataInicial">
+                    <input class="formulario__entrada w90" value="" type="datetime-local" name="data_ini" id="dataInicial">
                 </div>
             </section>
 
             <section>
-                <label for="dataFim" class="formulario__etiqueta">Data final</label>
+                <label for="data_fim" class="formulario__etiqueta">Data final</label>
                 <div class="mv0-5">
                     <input class="formulario__entrada w90" value="" type="datetime-local" name="dataFim" id="dataFim">
                 </div>

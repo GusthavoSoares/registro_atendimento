@@ -5,13 +5,14 @@ class UsuarioController extends Conexao
 
     public function formaObjeto(array $dados)
     {
-        return new Usuario($dados['idUsuario'], $dados['nomeUsuario'], $dados['emailUsuario'], $dados['loginUsuario']);
+        return new Usuario($dados['nome'], $dados['email'], $dados['cargo'], $dados['ativo']);
     }
 
     public function buscar()
     {
-        $sql = "SELECT idUsuario, nomeUsuario, emailUsuario, loginUsuario FROM usuario";
-        $stmt = $this->conexao()->query($sql);
+        $sql = "SELECT nome, email, cargo, ativo FROM usuario; ";
+        $stmt = $this->conexao()->prepare($sql);
+        $stmt->execute();
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $dados = $stmt->fetchAll();
 

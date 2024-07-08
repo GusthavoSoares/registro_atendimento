@@ -1,10 +1,16 @@
 <?php
     require_once __DIR__ . '/../../model/Conexao.php';
-    require_once __DIR__ . '/../../model/Usuario.php';
-    require_once __DIR__ . '/../../repositorio/UsuarioRepositorio.php';
+    require_once __DIR__ . '/../../model/RelatorioAtendimento.php';
+    require_once __DIR__ . '/../../repositorio/AtendimentoRepositorio.php';
 
-    $user = new UsuarioRepositorio();
-    $usuarios = $user->buscar();
+    session_start();
+    $forma = $_SESSION['form'];
+    $publico = $_SESSION['public'];
+    $tipoAtt = $_SESSION['att'];
+
+    $repositorio = new AtendimentoRepositorio();
+    $conteudo = $repositorio->buscarTodos($forma, $publico, $tipoAtt);
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -42,21 +48,31 @@ tr:nth-child(even) {
     <table>
         <thead>
             <tr>
+                <th>Tipo Solicitante</th>
+                <th>Identificador Unico</th>
+                <th>Forma de Atendimento</th>
                 <th>Nome</th>
-                <th>CPF</th>
-                <th>Email</th>
-                <th>Cargo</th>
-                <th>ativo</th>
+                <th>E-Mail</th>
+                <th>Telefone</th>
+                <th>Tipo Atendimento</th>
+                <th>Descrição</th>
+                <th>Ativo</th>
+                <th>Informações</th>
             </tr>
         </thead>
         <tbody>
-            <?php foreach($usuarios as $usuario): ?>
+            <?php foreach($conteudo as $linha): ?>
             <tr>
-                <td><?= $usuario->getNome() ?></td>
-                <td>123.456.789-00</td>
-                <td><?= $usuario->getEmail() ?></td>
-                <td><?= $usuario->getCargo() ?></td>
-                <td><?= $usuario->getAtivo() ?></td>
+                <td><?= $linha->getTipoSolicitante(); ?></td>
+                <td><?= $linha->getIdentificadorUnico(); ?></td>
+                <td><?= $linha->getFormaAtendimento(); ?></td>
+                <td><?= $linha->getNome(); ?></td>
+                <td><?= $linha->getEmail(); ?></td>
+                <td><?= $linha->getTelefone(); ?></td>
+                <td><?= $linha->getTipoInformacao(); ?></td>
+                <td><?= $linha->getDescricao(); ?></td>
+                <td><?= $linha->getAtivo(); ?></td>
+                <td><?= $linha->getInformacao(); ?></td>
             </tr>
             <?php endforeach; ?>
         </tbody>

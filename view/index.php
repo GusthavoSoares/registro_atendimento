@@ -1,7 +1,7 @@
 <?php
-// require_once __DIR__ . "/../src/controller/SessaoController.php";
-// $controle = new SessaoController();
-// $controle->protecao();
+require_once __DIR__ . "/../src/controller/SessaoController.php";
+$controle = new SessaoController();
+$controle->protecao();
 ?>
 
 <!DOCTYPE html>
@@ -43,11 +43,11 @@
                 </div>                   
                 </section>
                 <div class="centralizado formulario__subtitulo">
-                <label for="pessoaAtendida">Quem estou atendendo </label>
+                <label for="pessoasAtendimento">Quem estou atendendo </label>
             </div>
             <div class="opcoesAtendimentos">
                 <div class="opcaoFormulario">
-                    <input value="" type="radio" name="pessoasAtendimento" class="formulario__opcao" id="empregador" required>
+                    <input value="" type="radio" name="pessoaAtendimento" class="formulario__opcao" id="empregador" required>
                     <label for="empregador" class="formulario__etiqueta">Empregador</label>
                 </div>
                 <div class="opcaoFormulario">

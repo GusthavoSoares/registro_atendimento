@@ -1,7 +1,7 @@
 <?php
-// require_once __DIR__ . "/../src/controller/SessaoController.php";
-// $controle = new SessaoController();
-// $controle->protecao();
+require_once __DIR__ . "/../src/controller/SessaoController.php";
+$controle = new SessaoController();
+$controle->protecao();
 ?>
 
 <!DOCTYPE html>
@@ -21,14 +21,14 @@
         <fieldset class="formulario__campo w80 mv0-5">
             <label class="formulario__legenda" for="nomeEmpregador">Nome do Empregador</label>
             <div class="mv1">
-                <input type="text" id="nomeEmpregador" name="nomeEmpregador" class="w90 formulario__entrada pv2" value=""
+                <input type="text" id="nomeEmpregador" name="nome_empregador" class="w90 formulario__entrada pv2" value=""
                 required maxlength="100">
             </div>
             
             <section>
                 <label class="formulario__legenda centralizado mbt1" for="cnpj_empregador">CNPJ do Empregador</label>
                 <div class="mv1">
-                    <input type="text" id="cnpjEmpregador" name="cnpjEmpregador" class="formulario__entrada w90" value=""
+                    <input type="text" id="cnpjEmpregador" name="cnpj_empregador" class="formulario__entrada w90" value=""
                     required pattern="^[0-9]{14}$" maxlength="14">
                 </div>
             </section>
@@ -36,7 +36,7 @@
             <section>
                 <label class="formulario__legenda mv1" for="telefone_empregador">Telefone de Contato</label>
                 <div class="mv1">
-                    <input type="tel" id="telefone_empregador" name="telefoneEmpregador" value=""
+                    <input type="tel" id="telefone_empregador" name="telefone_empregador" value=""
                     class="formulario__entrada w90" required pattern="^[0-9]{10,11}$" maxlength="11" value="" placeholder="51123456789">
                 
                 </div>

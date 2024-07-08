@@ -1,7 +1,7 @@
 <?php
-// require_once __DIR__ . "/../src/controller/SessaoController.php";
-// $controle = new SessaoController();
-// $controle->protecao();
+    require_once __DIR__ . "/../src/controller/SessaoController.php";
+    $controle = new SessaoController();
+    $controle->protecao();
 ?>
 
 
