@@ -37,7 +37,11 @@
                 <option value="teams">Teams</option>
                 <option value="outro">Outro</option>
             </select>
-        </fieldset>home.phplt">Sem Filtro</option>
+        </fieldset>
+        <fieldset class="formulario__campo w90 mt2">
+            <legend class="formulario__subtitulo">Tipo de solicitante</legend>
+            <select name="publico" class="formulario__selecao w90">
+                <option value="default">Sem Filtro</option> 
                 <option value="empregador">Empregador</option>
                 <option value="trabalhador">Trabalhador</option>
                 <option value="out_agen">Outras agências</option>
@@ -46,7 +50,7 @@
                 <option value="mercado_trabalho">Interessado de informações sobre o Mercado de Trabalho</option>
                 <option value="outro">Outro</option>
             </select>
-        </fieldset>
+        </fieldset>
         <fieldset class="formulario__campo w90 mt2">
             <legend class="formulario__subtitulo">Tipo de atendimento</legend>
             <select class="formulario__selecao w90" name="tipoAtendimento">
