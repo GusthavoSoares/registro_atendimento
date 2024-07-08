@@ -20,9 +20,9 @@
         <fieldset class="formulario__campo w80 mt5 centralizado">
             <legend class="formulario__subtitulo">Solicitante</legend>
             <section class="centralizado">
-                    <label class="formulario__etiqueta" for="nomeSolicitante">Nome</label>
+                    <label class="formulario__etiqueta" for="nomePublico">Nome</label>
                 <div>
-                    <input class="formulario__entrada w90" type="text" name="nomeSolicitante" id="nomeSolicitante" value="" required>
+                    <input class="formulario__entrada w90" type="text" name="nomePublico" id="nomePublico" value="" required>
                 </div>
             </section>
             <section class="centralizado mv0-5">

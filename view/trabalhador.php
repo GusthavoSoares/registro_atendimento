@@ -19,9 +19,9 @@
         <fieldset class="formulario__campo w50">
             <legend class="formulario__subtitulo">Identificação do trabalhador</legend>
             <section>
-                <label class="formulario__etiqueta" for="nomeTrabalhador">Nome</label>
+                <label class="formulario__etiqueta" for="nomePublico">Nome</label>
                 <div class="mv0-5">
-                    <input value="" type="text" required minlength="3" id="nomeTrabalhador" name="nomeTrabalhador" class="formulario__entrada w90">
+                    <input value="" type="text" required minlength="3" id="nomePublico" name="nomePublico" class="formulario__entrada w90">
                 </div>
             </section>
             <section>

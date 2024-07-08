@@ -18,13 +18,13 @@
             <legend class="formulario__subtitulo">Atendimento</legend>
             <fieldset class="sem_borda w100 centralizado">
                 <legend class="formulario__legenda">Id do Solicitante</legend>
-                <select class="formulario__selecao w90" value="idSolicitante"  required>
+                <select class="formulario__selecao w90" name="idSolicitante" value=""  required>
                 <option></option>
                 </select>
             </fieldset>
             <fieldset class="sem_borda w100 centralizado">
                 <legend class="formulario__legenda">Tipo de Atendimento</legend>
-                <select class="formulario__selecao w90" name="tipoAtendimento" required>
+                <select class="formulario__selecao w90" name="nomeAtendimento" required>
                     <option value="carteiraTrabalho">Carteira de Trabalho, SD, Vagas</option>
                     <option value="programaGauchoArtesanato">Programa Gaúcho de Artesanato</option>
                     <option value="centroHumanistico">Vida Centro Humanístico</option>

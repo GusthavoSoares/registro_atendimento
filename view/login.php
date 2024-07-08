@@ -18,13 +18,13 @@
             <section>
                 <label class="formulario__etiqueta" for="login">Login</label>
                 <div class="mv0-5">
-                 <input value="" type="email" id="login" name="login" class="formulario__entrada w90" required minlength="5" maxlength="100">
+                 <input value="" type="email" id="login" name="emailUsuario" class="formulario__entrada w90" required minlength="5" maxlength="100">
                 </div>
             </section>
             <section>
                 <label class="formulario__etiqueta"  for="senha">Senha</label>
                 <div class="mv0-5">
-                    <input value="" type="password" id="senha" name="senha" class="formulario__entrada w80" required minlength="5" maxlength="20">
+                    <input value="" type="password" id="senha" name="senhaUsuario" class="formulario__entrada w80" required minlength="5" maxlength="20">
                     <i class="fa-solid fa-eye icone centralizado mh1" id="olho"></i>
                 </div>
             </section>

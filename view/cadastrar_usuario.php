@@ -17,27 +17,27 @@
             <section class="centralizado">
                 <label class="formulario__etiqueta" for="nomeUsuario">Nome</label>
                 <div>
-                    <input type="text" class="formulario__entrada w90" value='' name="nome" required id="nomeUsuario" placeholder="João da Silva"  >
+                    <input type="text" class="formulario__entrada w90" value='' name="nomeUsuario" required id="nomeUsuario" placeholder="João da Silva"  >
                 </div>
             </section>
             <section class="centralizado mv1">
                 <label class="formulario__etiqueta" for="emailUsuario ">E-mail</label>
                 <div>
-                    <input class="formulario__entrada w90" type="email" value='' name="email" required id="emailUsuario"
+                    <input class="formulario__entrada w90" type="email" value='' name="emailUsuario" required id="emailUsuario"
                     placeholder="exemploEmail@gmail.com" >
                 </div>
             </section>
             <section>
-                <label class="formulario__etiqueta"  for="senha">Senha</label>
+                <label class="formulario__etiqueta"  for="senhaUsuario">Senha</label>
                 <div class="mv0-5">
-                    <input value="" type="password" id="senha" name="senha" class="formulario__entrada w80" required minlength="5" maxlength="20">
+                    <input value="" type="password" id="senhaUsuario" name="senhaUsuario" class="formulario__entrada w80" required minlength="5" maxlength="20">
                     <i class="fa-solid fa-eye icone centralizado mh1" id="olho"></i>
                 </div>
             </section>
             <section>
             <fieldset class="sem_borda mh2 mv1 centralizado">
                 <legend class="formulario__legenda">Cargo</legend>
-                    <select name="cargoUsuario" required class="formulario__selecao w90">
+                    <select name="nomePerfil" required class="formulario__selecao w90">
                         <option value="usuario">Usuário</option>
                         <option value="admin">Administrador</option>
                     </select>
@@ -46,7 +46,7 @@
             <fieldset class="formulario__campo w80 mt2">
             <legend class="formulario__subtitulo">Ativo</legend>
                 <div class="centralizado mv0-5">
-                    <select class="formulario__selecao w90" required name="ativoUsuario">
+                    <select class="formulario__selecao w90" required name="ativo">
                         <option value="Ativado">Ativado</option>
                         <option value="Desativado">Desativado</option>
                     </select>

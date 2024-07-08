@@ -20,7 +20,7 @@
             <fieldset class="formulario__campo">
                 <legend class="formulario__subtitulo">Tipo de atendimento</legend> 
                 <section class="mv0-5">
-                <select id="tipoAtendimento" name="tipoAtendimento" class="formulario__selecao w90" required>
+                <select id="tipoAtendimento" name="nomeAtendimento" class="formulario__selecao w90" required>
                     <option value="" disabled selected>Selecionar sua resposta</option>
                     <option value="carteira_trabalho">Carteira de Trabalho, SD, Vagas</option>
                     <option value="programa_artesanato">Programa Gaúcho do Artesanato</option>
