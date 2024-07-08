@@ -25,17 +25,17 @@ class AtendimentoRepositorio extends Conexao
         $params = [];
             
         if (isset($forma) && $forma != 'default') {
-            $filtros[] = 'forma_atendimento = :forma';
+            $filtros[] = 'solici.forma_atendimento = :forma';
             $params[':forma'] = $forma;
         }
         
         if (isset($publico) && $publico != 'default') {
-            $filtros[] = 'tipo_solicitante = :publico';
+            $filtros[] = 'solici.tipo_solicitante = :publico';
             $params[':publico'] = $publico;
         }
         
         if (isset($tipoAtt) && $tipoAtt != 'default') {
-            $filtros[] = 'tipo_informacao = :tipoAtt';
+            $filtros[] = 'att.tipo = :tipoAtt';
             $params[':tipoAtt'] = $tipoAtt;
         }
 
