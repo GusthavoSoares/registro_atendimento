@@ -36,6 +36,6 @@ CREATE TABLE atendimento(
     FOREIGN KEY (id_solicitante) REFERENCES solicitante(id)    
 );
 
-CREATE INDEX data_solicitante_index ON solicitante(data_registro);
+CREATE INDEX data_solicitante_index ON solicitante(data_registro_soli);
 CREATE INDEX data_atendimento_index ON atendimento(data_registro);
 CREATE INDEX email_solicitante_index ON solicitante(email);
