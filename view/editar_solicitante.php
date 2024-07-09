@@ -1,7 +1,7 @@
 <?php
-    require_once __DIR__ . "/../src/controller/SessaoController.php";
-    $controle = new SessaoController();
-    $controle->protecao();
+require_once __DIR__ . "/../src/controller/SessaoController.php";
+$controle = new SessaoController();
+$controle->protecao();
 ?>
 
 
@@ -16,40 +16,55 @@
 </head>
 
 <body>
+    <header class="grid100  menu ">
+        <nav class="w100 direita pv1">
+            <?php
+            if (isset($_SESSION['nome']) == 'admin') {
+                ?>
+                <a href="admin.php" class="menu__botao">Admin</a>
+                <?php
+            }
+            ?>
+            <a href="usuario.php" class="menu__botao">Usuário</a>
+        </nav>
+    </header>
     <form method="post" class="formulario">
         <fieldset class="formulario__campo w80 mt5 centralizado">
             <legend class="formulario__subtitulo">Solicitante</legend>
             <section class="centralizado">
-                    <label class="formulario__etiqueta" for="nomePublico">Nome</label>
+                <label class="formulario__etiqueta" for="nomePublico">Nome</label>
                 <div>
-                    <input class="formulario__entrada w90" type="text" name="nomePublico" id="nomePublico" value="" required>
+                    <input class="formulario__entrada w90" type="text" name="nomePublico" id="nomePublico" value=""
+                        required>
                 </div>
             </section>
             <section class="centralizado mv0-5">
-                    <label class="formulario__etiqueta" for="emailSolicitante">E-mail</label>
+                <label class="formulario__etiqueta" for="emailSolicitante">E-mail</label>
                 <div>
-                    <input class="formulario__entrada w90" type="email" name="emailSolicitante" id="emailSolicitante" value="" required>
+                    <input class="formulario__entrada w90" type="email" name="emailSolicitante" id="emailSolicitante"
+                        value="" required>
                 </div>
             </section>
             <section class="centralizado mv0-5">
                 <label class="formulario__etiqueta" for="telefoneSolicitante">Telefone</label>
                 <div>
-                    <input type="tel" name="telefoneSolicitante" id="telefoneSolicitante" value="" required class="formulario__entrada w90">
+                    <input type="tel" name="telefoneSolicitante" id="telefoneSolicitante" value="" required
+                        class="formulario__entrada w90">
                 </div>
             </section>
-            <fieldset class="sem_borda mv0-5 centralizado"> 
+            <fieldset class="sem_borda mv0-5 centralizado">
                 <legend class="formulario__legenda">Tipo de pessoa</legend>
                 <div>
                     <input class="formulario__opcao " type="radio" name="tipoPessoa" value="" id="fisica" required>
                     <label class="formulario__etiqueta" for="fisica">Física</label>
                 </div>
                 <div>
-                    <input class="formulario__opcao" type="radio" name="tipoPessoa" value="" id="juridica"  required>
+                    <input class="formulario__opcao" type="radio" name="tipoPessoa" value="" id="juridica" required>
                     <label for="juridica" class="formulario__etiqueta">Jurídica</label>
                 </div>
                 <div>
-                    <input class="formulario__entrada w50 mv1" type="text" value="" name="identificadorUnico" id="identificadorUnico"
-                        placeholder="Insira o CPF ou CNPJ">
+                    <input class="formulario__entrada w50 mv1" type="text" value="" name="identificadorUnico"
+                        id="identificadorUnico" placeholder="Insira o CPF ou CNPJ">
                 </div>
             </fieldset>
             <fieldset class="sem_borda centralizado">
@@ -63,7 +78,7 @@
                     <option value="teams">Teams</option>
                     <option value="outro">Outro</option>
                 </select>
-            </fieldset >
+            </fieldset>
             <fieldset class="sem_borda mv1 centralizado">
                 <legend class="formulario__legenda">Tipo de solicitante</legend>
                 <div>
@@ -94,7 +109,8 @@
             <div class="centralizado">
                 <label class="formulario__etiqueta" for="descricaoAtividade">Descrição da atividade</label>
                 <div>
-                    <textarea required id="descricaoAtividade" name="descricaoAtividade" class="formulario__caixa__texto w90" value=""></textarea>
+                    <textarea required id="descricaoAtividade" name="descricaoAtividade"
+                        class="formulario__caixa__texto w90" value=""></textarea>
                 </div>
             </div>
         </fieldset>

@@ -47,8 +47,8 @@
             <legend class="formulario__subtitulo">Ativo</legend>
                 <div class="centralizado mv0-5">
                     <select class="formulario__selecao w90" required name="ativo">
-                        <option value="Ativado">Ativado</option>
-                        <option value="Desativado">Desativado</option>
+                        <option value="S">Ativado</option>
+                        <option value="N">Desativado</option>
                     </select>
                 </div>
             </fieldset>

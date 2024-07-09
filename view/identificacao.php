@@ -1,7 +1,7 @@
 <?php
-    require_once __DIR__ . "/../src/controller/SessaoController.php";
-    $controle = new SessaoController();
-    $controle->protecao();
+require_once __DIR__ . "/../src/controller/SessaoController.php";
+$controle = new SessaoController();
+$controle->protecao();
 ?>
 
 <!DOCTYPE html>
@@ -15,20 +15,33 @@
 </head>
 
 <body>
+    <header class="grid100  menu ">
+        <nav class="w100 direita pv1">
+            <?php
+            if (isset($_SESSION['nome']) == 'admin') {
+                ?>
+                <a href="admin.php" class="menu__botao">Admin</a>
+                <?php
+            }
+            ?>
+            <a href="usuario.php" class="menu__botao">Usuário</a>
+        </nav>
+    </header>
     <form method="post" class="formulario centralizado mt10">
         <fieldset class="formulario__campo w90">
             <legend class="formulario__subtitulo">Identificação</legend>
             <section>
                 <label class="formulario__etiqueta" for="nomeIdentificacao">Nome</label>
                 <div class="mv0-5">
-                    <input type="text" value="" name="nomeIdentificacao" required id="nomeIdentificacao" class="formulario__entrada w90">
+                    <input type="text" value="" name="nomeIdentificacao" required id="nomeIdentificacao"
+                        class="formulario__entrada w90">
                 </div>
             </section>
             <fieldset class="sem_borda">
                 <legend class="formulario__legenda">Tipo de cadastro</legend>
                 <section class="mv0-5">
                     <input class="formulario__entrada" value="" type="radio" name="tipoPessoa" id="pessoaFisica">
-                    <label for="pessoaFisica" class="formulario__etiqueta">Pessoa Física</label >
+                    <label for="pessoaFisica" class="formulario__etiqueta">Pessoa Física</label>
                 </section>
                 <section>
                     <input value="" type="radio" name="tipoPessoa" id="pessoaJuridica">
@@ -44,16 +57,17 @@
                 <label class="formulario__etiqueta" for="telefoneContatoMercado">Telefone</label>
                 <div class="mv0-5">
                     <input type="tel" minlength="3" value="" id="telefoneContatoMercado" name="telefoneContatoMercado"
-                    pattern="^[0-9]{10,11}$" placeholder="51123456789" class="formulario__entrada w90">
+                        pattern="^[0-9]{10,11}$" placeholder="51123456789" class="formulario__entrada w90">
                 </div>
             </section>
             <section>
                 <label class="formulario__etiqueta" for="emailContatoMercado">E-mail</label>
                 <div class="mv0-5">
-                    <input type="tel" minlength="3" value="" id="emailContatoMercado" name="emailContatoMercado" placeholder="exemplo@gmail.com" class="formulario__entrada w90">
+                    <input type="tel" minlength="3" value="" id="emailContatoMercado" name="emailContatoMercado"
+                        placeholder="exemplo@gmail.com" class="formulario__entrada w90">
                 </div>
             </section>
-            <section >
+            <section>
                 <label class="formulario__etiqueta" for="desc_atividade">Descrição da atividade</label>
                 <div class="mv0-5">
                     <textarea class="formulario__caixa__texto w90" id="desc_atividade" required></textarea>

@@ -1,7 +1,7 @@
 <?php
-    require_once __DIR__ . "/../src/controller/SessaoController.php";
-    $controle = new SessaoController();
-    $controle->protecao();
+require_once __DIR__ . "/../src/controller/SessaoController.php";
+$controle = new SessaoController();
+$controle->protecao();
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +15,18 @@
 </head>
 
 <body>
+    <header class="grid100  menu ">
+        <nav class="w100 direita pv1">
+            <?php
+            if (isset($_SESSION['nome']) == 'admin') {
+                ?>
+                <a href="admin.php" class="menu__botao">Admin</a>
+                <?php
+            }
+            ?>
+            <a href="usuario.php" class="menu__botao">Usuário</a>
+        </nav>
+    </header>
     <form method="post" class="formulario">
         <fieldset class="formulario__campo w50 mt12-5">
             <legend class="formulario__subtitulo centralizado">Orientações sobre a vida centro humanístico</legend>

@@ -1,7 +1,7 @@
 <?php
-    require_once __DIR__ . "/../src/controller/SessaoController.php";
-    $controle = new SessaoController();
-    $controle->protecao();
+require_once __DIR__ . "/../src/controller/SessaoController.php";
+$controle = new SessaoController();
+$controle->protecao();
 ?>
 
 
@@ -19,17 +19,18 @@
     <form method="post" class="formulario">
         <fieldset class="formulario__campo centralizado w80 mt12-5">
             <legend class="formulario__subtitulo">Usuário</legend>
-            <section >
+            <section>
                 <label class="formulario__legenda" for="nomeUsuario">Nome</label>
                 <div>
-                    <input class="formulario__entrada w90" type="text" value='' name="nomeUsuario" required id="nomeUsuario" placeholder="Maria Rosana">
+                    <input class="formulario__entrada w90" type="text" value='' name="nomeUsuario" required
+                        id="nomeUsuario" placeholder="Maria Rosana">
                 </div>
             </section>
             <section class="mv0-5">
-                <label class="formulario__legenda"for="emailUsuario">E-mail</label>
+                <label class="formulario__legenda" for="emailUsuario">E-mail</label>
                 <div>
-                    <input type="email" value='' name="emailUsuario" required id="emailUsuario" class="formulario__entrada w90"
-                    placeholder="exemplo@gmail.com">
+                    <input type="email" value='' name="emailUsuario" required id="emailUsuario"
+                        class="formulario__entrada w90" placeholder="exemplo@gmail.com">
                 </div>
             </section>
             <section>

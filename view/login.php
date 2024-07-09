@@ -12,8 +12,8 @@ session_start();
     <link rel="stylesheet" href="./estilos/pg-login.css">
     <title>Login</title>
 </head>
-
 <body class="h100">
+    
     <form class="formulario centralizado mt12-5" action="../src/controller/logando.php" method="post">
         <h1 class="formulario__titulo centralizado">Entrar</h1>
         <fieldset class="formulario__campo w80 ">
@@ -35,6 +35,8 @@ session_start();
 
         </fieldset>
         <div class="centralizado mv0-5 grid50-50 w50">
+            <a href="./cadastrar_usuario.php"
+                class="formulario__botao__secundario formulario__botao__padrao">Cadastrar</a>
             <input type="submit" value="Logar" class="formulario__botao formulario__botao__padrao ">
         </div>
     </form>
