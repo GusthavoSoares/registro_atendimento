@@ -6,11 +6,11 @@
     session_start();
 
     if(isset($_REQUEST['salvar'])){
-        $nome = $_POST['nome'];
-        $email = $_POST['email'];
-        $senha = password_hash($_POST['senha'], PASSWORD_BCRYPT);
-        $cargo = $_POST['cargoUsuario'];
-        $ativo = $_POST['ativoUsuario'];
+        $nome = $_POST['nomeUsuario'];
+        $email = $_POST['emailUsuario'];
+        $senha = password_hash($_POST['senhaUsuario'], PASSWORD_BCRYPT);
+        $cargo = $_POST['nomePerfil'];
+        $ativo = $_POST['ativo'];
 
         $user = new Usuario($nome, $email, $cargo, $ativo, $senha);
         $repositorio = new UsuarioRepositorio();

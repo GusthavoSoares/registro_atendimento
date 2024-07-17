@@ -33,7 +33,6 @@
 
 .formulario__botao {
     background-color: var(--cor_destaque);
-    border-radius: 20px;
     color: var(--cor_tercearia);
 }
 
@@ -48,6 +47,7 @@
     margin: 0.3%;
     text-decoration: none;
     padding: 0.5% 1.5%;
+    border-radius: 20px;
     font-size: 0.8rem;
     font-family: var(--fonte_titulo);
     cursor: pointer;
@@ -56,8 +56,6 @@
 .formulario__botao__secundario {
     color: var(--cor_secundaria);
     background: var(--cor_tercearia);
-    text-decoration: none;
-    border-radius: 20px;
 }
 
 .formulario__botao__secundario:hover {
@@ -65,6 +63,19 @@
     background-color: var(--cor_destaque);
     color: var(--cor_tercearia);
 }
+
+
+.formulario__botao__terceario {
+    background: var(--cor_secundaria);
+    color: var(--cor_destaque);
+}
+
+.formulario__botao__terceario:hover {
+    transition: 1s;
+    background: var(--cor_destaque);
+    color: var(--cor_secundaria);
+}
+
 
 .formulario__agrupamento {
     border: 0;

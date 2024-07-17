@@ -3,7 +3,7 @@ CREATE DATABASE atendimentos;
 USE atendimentos;
 
 CREATE TABLE usuario(
-	id INT PRIMARY KEY AUTO_INCREMENT,
+	id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) DEFAULT '',
     email VARCHAR(100) NOT NULL,
     senha VARCHAR(100) NOT NULL,
@@ -12,7 +12,7 @@ CREATE TABLE usuario(
 );
 
 CREATE TABLE solicitante(
-	id INT PRIMARY KEY AUTO_INCREMENT,  
+	id INT AUTO_INCREMENT PRIMARY KEY, 
     id_usuario INT NOT NULL,
 	tipo_pessoa ENUM('pessoa_fisica', 'pessoa_juridica') NOT NULL,
     tipo_solicitante VARCHAR(255) NOT NULL,
@@ -29,10 +29,9 @@ CREATE TABLE solicitante(
 );
 
 CREATE TABLE atendimento(
-	id INT PRIMARY KEY AUTO_INCREMENT,
+	id INT AUTO_INCREMENT PRIMARY KEY,
     id_solicitante INT NOT NULL,
-    tipo VARCHAR(255) NOT NULL,
-	informacao VARCHAR(255) DEFAULT '',
+	informacao VARCHAR(255) NOT NULL,
     data_registro DATETIME NOT NULL,
     FOREIGN KEY (id_solicitante) REFERENCES solicitante(id)    
 );

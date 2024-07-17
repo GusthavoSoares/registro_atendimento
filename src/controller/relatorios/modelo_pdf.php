@@ -8,8 +8,17 @@
     $publico = $_SESSION['public'];
     $tipoAtt = $_SESSION['att'];
 
+    $dataFormIni = '';
+    $dataFormFim = '';
+    if($_SESSION['dateInicio'] != ''){
+        $dataFormIni = date('Y-m-d H:i:s', strtotime($_SESSION['dateInicio']));
+    }
+    if($_SESSION['dateFim']){
+        $dataFormFim = date('Y-m-d H:i:s', strtotime($_SESSION['dateFim']));
+    }    
+
     $repositorio = new AtendimentoRepositorio();
-    $conteudo = $repositorio->buscarTodos($forma, $publico, $tipoAtt);
+    $conteudo = $repositorio->buscarTodos($forma, $publico, $tipoAtt, $dataFormIni, $dataFormFim);
 
 ?>
 <!DOCTYPE html>
@@ -58,6 +67,7 @@ tr:nth-child(even) {
                 <th>Descrição</th>
                 <th>Ativo</th>
                 <th>Informações</th>
+                <th>Data de Registro</th>
             </tr>
         </thead>
         <tbody>
@@ -73,6 +83,7 @@ tr:nth-child(even) {
                 <td><?= $linha->getDescricao(); ?></td>
                 <td><?= $linha->getAtivo(); ?></td>
                 <td><?= $linha->getInformacao(); ?></td>
+                <td><?= $linha->getData(); ?></td>
             </tr>
             <?php endforeach; ?>
         </tbody>

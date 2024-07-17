@@ -15,13 +15,30 @@ $controle->protecao();
 </head>
 
 <body>
+    <header class="grid100  menu ">
+        <nav class="w100 direita pv1">
+            <?php
+            if ($_SESSION['nome'] == 'admin') {
+                ?>
+                <a href="admin.php" class="menu__botao">Admin</a>
+                <?php
+            }
+            ?>
+            <a href="../src/controller/deslogando.php" class="menu__botao__secundario">Deslogar</a>
+            <a href="usuario.php" class="menu__botao">Usuário</a>
+        </nav>
+    </header>
     <form method="post" class="formulario centralizado">
+        <header class="grid100  menu ">
+            
+        </header>
         <fieldset class="formulario__campo w80">
             <legend class="formulario__subtitulo">Informações sobre o mercado de trabalho (SIP)</legend>
-            <section >
+            <section>
                 <label for="nomeInfoMercado" class="formulario__etiqueta">Nome</label>
                 <div class="mv0-5">
-                    <input value="" type="text" required minlength="3" id="nomeInfoMercado" name="nomeInfoMercado" class="formulario__entrada w90">
+                    <input value="" type="text" required minlength="3" id="nomeInfoMercado" name="nomeInfoMercado"
+                        class="formulario__entrada w90">
                 </div>
             </section>
             <fieldset class="sem_borda">
@@ -30,38 +47,43 @@ $controle->protecao();
                     <input value="" type="radio" name="tipoPessoa" id="pessoaFisica" class="formulario__opcao">
                     <label for="pessoaFisica" class="formulario__etiqueta">Pessoa Física</label>
                 </div>
-                <div >
+                <div>
                     <input value="" type="radio" name="tipoPessoa" id="pessoaJuridica" class="formulario__opcao">
-                    <label  class="formulario__etiqueta" for="pessoaJuridica">Pessoa Jurídica</label>
+                    <label class="formulario__etiqueta" for="pessoaJuridica">Pessoa Jurídica</label>
                 </div>
                 <div class="mv0-5">
                     <input type="text" required minlength="3" id="cpf" name="identificadorUnico"
-                        placeholder="Informe seu CPF ou CNPJ" pattern="^[0-9]{11,14}$" maxlength="14" minlength="11" value="" class="formulario__entrada w50">
+                        placeholder="Informe seu CPF ou CNPJ" pattern="^[0-9]{11,14}$" maxlength="14" minlength="11"
+                        value="" class="formulario__entrada w50">
                 </div>
             </fieldset>
 
             <section>
 
-                <label  class="formulario__etiqueta" for="telefoneContatoMercado">Telefone</label>
+                <label class="formulario__etiqueta" for="telefoneContatoMercado">Telefone</label>
                 <div class="mv0-5">
-                    <input value="" type="tel" minlength="3" id="telefoneContatoMercado" name="telefoneContatoMercado" class="formulario__entrada w90">
+                    <input value="" type="tel" minlength="3" id="telefoneContatoMercado" name="telefoneContatoMercado"
+                        class="formulario__entrada w90">
                 </div>
             </section>
             <section>
                 <label class="formulario__etiqueta" for="emailContatoMercado">E-mail</label>
                 <div class="mv0-5">
-                    <input value="" type="tel" minlength="3" id="emailContatoMercado" name="emailContatoMercado" class="formulario__entrada w90">
+                    <input value="" type="tel" minlength="3" id="emailContatoMercado" name="emailContatoMercado"
+                        class="formulario__entrada w90">
                 </div>
             </section>
             <fieldset class="sem_borda mv0-5">
                 <legend class="formulario__legenda">Tipo de informações</legend>
                 <div>
                     <input value="" class="formulario__opcao" type="radio" name="tipoInfoMercado" id="intermediacao">
-                    <label class="formulario__etiqueta" for="intermediacao">Estatísticas da intermediação de mão de obra no âmbito do Sine/RS</label>
+                    <label class="formulario__etiqueta" for="intermediacao">Estatísticas da intermediação de mão de obra
+                        no âmbito do Sine/RS</label>
                 </div>
                 <div>
                     <input value="" type="radio" name="tipoInfoMercado" id="seguroDesemprego" class="formulario__opcao">
-                    <label for="seguroDesemprego" class="formulario__etiqueta">Estatísticas do seguro-desemprego no âmbito do Sine/RS</label>
+                    <label for="seguroDesemprego" class="formulario__etiqueta">Estatísticas do seguro-desemprego no
+                        âmbito do Sine/RS</label>
                 </div>
                 <div>
                     <input value="" type="radio" name="tipoInfoMercado" class="formulario__opcao" id="vagasAbertas">
@@ -80,9 +102,9 @@ $controle->protecao();
                     <label for="outro" class="formulario__etiqueta">Outro</label>
                 </div>
 
-            </fieldset >
+            </fieldset>
             <div>
-                <label  class="formulario__etiqueta" for="descAtividade">Descrição da atividade</label>
+                <label class="formulario__etiqueta" for="descAtividade">Descrição da atividade</label>
                 <div>
                     <textarea name="descAtividade" id="descAtividade" class="formulario__caixa__texto w90"></textarea>
                 </div>

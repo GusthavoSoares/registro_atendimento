@@ -1,0 +1,34 @@
+.menu {
+    background-color: var(--cor_secundaria);
+}
+
+
+
+.menu__botao {
+    padding: 0 1.5%;
+    background: var(--cor_principal);
+    text-decoration: none;
+    border-radius: 20px;
+    color: var(--cor_tercearia);
+}
+
+.menu__botao:hover {
+    transition: 1s;
+    color: var(--cor_principal);
+    background: var(--cor_tercearia);
+}
+
+
+.menu__botao__secundario {
+    padding: 0 1.5%;
+    background: var(--cor_destaque);
+    text-decoration: none;
+    border-radius: 20px;
+    color: var(--cor_tercearia);
+}
+
+.menu__botao__secundario:hover {
+    transition: 1s;
+    background: var(--cor_principal);
+    color: var(--cor_destaque);
+}

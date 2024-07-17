@@ -78,6 +78,7 @@
             </table>
         </section>
         <div class="centralizado mt1">
+            <a href="./home.php" class="formulario__botao__padrao formulario__botao__terceario">Voltar</a>
             <a href="./relatorio.php" class="formulario__botao__padrao formulario__botao">Gerar Relatório</a>
         </div>
         <script src="https://kit.fontawesome.com/df85906e6a.js" crossorigin="anonymous"></script>

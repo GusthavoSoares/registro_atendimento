@@ -13,8 +13,17 @@ $forma = $_SESSION['form'];
 $publico = $_SESSION['public'];
 $tipoAtt = $_SESSION['att'];
 
+$dataFormIni = '';
+$dataFormFim = '';
+if($_SESSION['dateInicio'] != ''){
+    $dataFormIni = date('Y-m-d H:i:s', strtotime($_SESSION['dateInicio']));
+}
+if($_SESSION['dateFim']){
+    $dataFormFim = date('Y-m-d H:i:s', strtotime($_SESSION['dateFim']));
+}    
+
 $repositorio = new AtendimentoRepositorio();
-$dados = $repositorio->buscarTodos($forma, $publico, $tipoAtt);
+$dados = $repositorio->buscarTodos($forma, $publico, $tipoAtt, $dataFormIni, $dataFormFim);
 
 $cabecalho = ['Tipos Solicitante', 
     'Identificador Único', 
