@@ -19,8 +19,8 @@
 </div>
 
 # Desenvolvedores
-- Front-end: Gabriella e Gusthavo
-- Back-end: Jonas
+- Front-end: Gabriella Rodrigues e Gusthavo Soares
+- Back-end: Jonas Jesus
 
 # Redes de cada membro do projeto
 
