@@ -11,11 +11,9 @@ Transformar os dados que são enviados para um **CSV (comma separated values)** 
   <img height="100" width="100"loading="lazy"src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="Símbolo do PHP"/>
 </div>
 
-#Desenvolvedores
-| Front-end | Back-end |
-
-| Gabriella  |  Jonas   |
-| Gusthavo  |          |
+# Desenvolvedores
+- Front-end: Gabriella e Gusthavo
+- Back-end: Jonas
 
 # Redes de cada membro do projeto
 
