@@ -19,9 +19,12 @@ Transformar os dados que são enviados para um **CSV (comma separated values)** 
 
 # Redes de cada membro do projeto
 
-| [Linkedin Gusthavo](https://www.linkedin.com/in/gusthavosoares/)   | [LinkedIn Gabriella](https://www.linkedin.com/in/gabriellarodriguesdasilva/)   | [LinkedIn Jonas](https://www.linkedin.com/in/jonas-silva-de-jesus/)
-| --------  | -------- | | -------- |
-|  [GitHub Gusthavo](https://github.com/GusthavoSoares)   | [Github Gabriella](https://github.com/Gabyzoca)   | [Github Jonas](https://github.com/JonasSJesus)  
+- **[Linkedin Gusthavo](https://www.linkedin.com/in/gusthavosoares/)**
+- **[LinkedIn Gabriella](https://www.linkedin.com/in/gabriellarodriguesdasilva/)**
+- **[LinkedIn Jonas](https://www.linkedin.com/in/jonas-silva-de-jesus/)**
+- **[GitHub Gusthavo](https://github.com/GusthavoSoares)**
+- **[Github Gabriella](https://github.com/Gabyzoca)**
+- **[Github Jonas](https://github.com/JonasSJesus)**
 
 
 
